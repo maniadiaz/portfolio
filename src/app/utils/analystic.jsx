@@ -2,7 +2,7 @@ import ReactGA from 'react-ga4'
 
 // Inicializar Google Analytics
 export const initGA = () => {
-  ReactGA.initialize('G-XXXXXXX')
+  ReactGA.initialize('G-0NWR5JFNXW')
 }
 
 // Registrar visita a página

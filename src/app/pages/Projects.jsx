@@ -21,92 +21,9 @@ function Proyects() {
   const projects = [
     {
       id: 1,
-      title: 'Online Degree System',
-      subtitle: 'UAS - Faculty of Computer Science Mazatlán, Academic Department',
-      period: 'August 2024 - March 2025',
-      status: 'completed',
-      projectType: 'company',
-      company: 'UAS en Facultad Informática Mazatlán',
-      githubLink: null,
-      description: 'Complete web system for digital management of degree applications, optimizing the workflow and reducing manual workload for the academic department.',
-      responsibilities: [
-        'Frontend and Backend design and development under MVC architecture',
-        'Database creation and connection using PHP and MySQL',
-        'Web interface implementation for managing degree requests digitally',
-        'Workflow optimization to streamline the process and reduce manual load'
-      ],
-      technologies: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript', 'MVC'],
-      icon: <WebIcon sx={{ fontSize: 40 }} />,
-      color: '#667eea'
-    },
-    {
-      id: 2,
-      title: 'GPS & User Management Application',
-      subtitle: 'Focused on Resellers',
-      period: 'May 2024 - August 2024',
-      status: 'completed',
-      projectType: 'freelance',
-      company: 'Freelancer',
-      githubLink: null,
-      description: 'Mobile and web application for real-time management of GPS devices and users, with advanced features for resellers.',
-      responsibilities: [
-        'Development of CRUD modules for user and GPS device management',
-        'Barcode reader implementation using phone camera',
-        'REST API integration and consumption for real-time data handling',
-        'Responsive design optimized for mobile and desktop devices',
-        'Development under SPA and PWA architecture, improving UX and enabling offline usage'
-      ],
-      technologies: ['React', 'Vite', 'REST API', 'PWA', 'SPA', 'Responsive Design'],
-      icon: <DevicesIcon sx={{ fontSize: 40 }} />,
-      color: '#764ba2'
-    },
-    {
-      id: 3,
-      title: 'React with Google Maps API',
-      subtitle: 'Location Mapping Practice Project',
-      period: 'February 2024 - June 2024',
-      status: 'completed',
-      projectType: 'personal',
-      company: null,
-      githubLink: 'https://github.com/maniadiaz/Map-Google-React',
-      description: 'Practice project to learn React Router and Google Maps API integration, featuring navigation between pages and an interactive map showing the Faculty of Computer Science UAS Mazatlán location.',
-      responsibilities: [
-        'Implementation of React Router for multi-page navigation',
-        'Integration of Google Maps API for location display',
-        'Creation of reusable components and routing structure',
-        'Development of Home, About, Contact, and Map pages',
-        'Material UI integration for consistent styling',
-        'Version control setup with Git and GitHub'
-      ],
-      technologies: ['React', 'React Router', 'Google Maps API', 'Material UI', 'JavaScript', 'Git'],
-      icon: <MapIcon sx={{ fontSize: 40 }} />,
-      color: '#3b82f6'
-    },
-    {
-      id: 4,
-      title: 'Push Notifications System',
-      subtitle: 'Instituto Cultural de Occidente - Colegio Xaveriano de Mazatlán',
-      period: 'August 2024',
-      status: 'completed',
-      projectType: 'company',
-      company: 'Certex',
-      githubLink: null,
-      description: 'Implementation of push notification system for an educational institution, enabling real-time communication with students and staff through web notifications.',
-      responsibilities: [
-        'UI design and implementation for push notification management section',
-        'Service Worker configuration for notification handling',
-        'Integration of subscription and unsubscription logic',
-        'Testing and deployment of notification delivery system'
-      ],
-      technologies: ['.NET', 'Blazor', 'C#', 'Service Worker', 'Web Push API'],
-      icon: <NotificationsIcon sx={{ fontSize: 40 }} />,
-      color: '#f59e0b'
-    },
-    {
-      id: 5,
       title: 'Micro-Savings Platform',
       subtitle: 'Financial Management System',
-      period: 'September 2024 - Present',
+      period: 'September 2025 - Present',
       status: 'in-progress',
       projectType: 'personal',
       company: null,
@@ -124,10 +41,10 @@ function Proyects() {
       color: '#d946ef'
     },
     {
-      id: 6,
+      id: 2,
       title: 'Personal Portfolio Website',
       subtitle: 'Professional Frontend Showcase',
-      period: 'October 2024',
+      period: 'October 2025',
       status: 'completed',
       projectType: 'personal',
       company: null,
@@ -146,6 +63,89 @@ function Proyects() {
       technologies: ['React', 'Vite', 'Material UI', 'React Router', 'JavaScript', 'CSS3', 'Responsive Design'],
       icon: <WorkIcon sx={{ fontSize: 40 }} />,
       color: '#10b981'
+    },
+    {
+      id: 3,
+      title: 'Push Notifications System',
+      subtitle: 'Instituto Cultural de Occidente - Colegio Xaveriano de Mazatlán',
+      period: 'August 2025',
+      status: 'completed',
+      projectType: 'company',
+      company: 'Certex',
+      githubLink: null,
+      description: 'Implementation of push notification system for an educational institution, enabling real-time communication with students and staff through web notifications.',
+      responsibilities: [
+        'UI design and implementation for push notification management section',
+        'Service Worker configuration for notification handling',
+        'Integration of subscription and unsubscription logic',
+        'Testing and deployment of notification delivery system'
+      ],
+      technologies: ['.NET', 'Blazor', 'C#', 'Service Worker', 'Web Push API'],
+      icon: <NotificationsIcon sx={{ fontSize: 40 }} />,
+      color: '#f59e0b'
+    },
+    {
+      id: 4,
+      title: 'GPS & User Management Application',
+      subtitle: 'Focused on Resellers',
+      period: 'May 2025 - August 2025',
+      status: 'completed',
+      projectType: 'freelance',
+      company: 'Freelancer',
+      githubLink: null,
+      description: 'Mobile and web application for real-time management of GPS devices and users, with advanced features for resellers.',
+      responsibilities: [
+        'Development of CRUD modules for user and GPS device management',
+        'Barcode reader implementation using phone camera',
+        'REST API integration and consumption for real-time data handling',
+        'Responsive design optimized for mobile and desktop devices',
+        'Development under SPA and PWA architecture, improving UX and enabling offline usage'
+      ],
+      technologies: ['React', 'Vite', 'REST API', 'PWA', 'SPA', 'Responsive Design'],
+      icon: <DevicesIcon sx={{ fontSize: 40 }} />,
+      color: '#764ba2'
+    },
+    {
+      id: 5,
+      title: 'React with Google Maps API',
+      subtitle: 'Location Mapping Practice Project',
+      period: 'February 2025 - June 2025',
+      status: 'completed',
+      projectType: 'personal',
+      company: null,
+      githubLink: 'https://github.com/maniadiaz/Map-Google-React',
+      description: 'Practice project to learn React Router and Google Maps API integration, featuring navigation between pages and an interactive map showing the Faculty of Computer Science UAS Mazatlán location.',
+      responsibilities: [
+        'Implementation of React Router for multi-page navigation',
+        'Integration of Google Maps API for location display',
+        'Creation of reusable components and routing structure',
+        'Development of Home, About, Contact, and Map pages',
+        'Material UI integration for consistent styling',
+        'Version control setup with Git and GitHub'
+      ],
+      technologies: ['React', 'React Router', 'Google Maps API', 'Material UI', 'JavaScript', 'Git'],
+      icon: <MapIcon sx={{ fontSize: 40 }} />,
+      color: '#3b82f6'
+    },
+    {
+      id: 6,
+      title: 'Online Degree System',
+      subtitle: 'UAS - Faculty of Computer Science Mazatlán, Academic Department',
+      period: 'August 2024 - March 2025',
+      status: 'completed',
+      projectType: 'company',
+      company: 'UAS en Facultad Informática Mazatlán',
+      githubLink: null,
+      description: 'Complete web system for digital management of degree applications, optimizing the workflow and reducing manual workload for the academic department.',
+      responsibilities: [
+        'Frontend and Backend design and development under MVC architecture',
+        'Database creation and connection using PHP and MySQL',
+        'Web interface implementation for managing degree requests digitally',
+        'Workflow optimization to streamline the process and reduce manual load'
+      ],
+      technologies: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript', 'MVC'],
+      icon: <WebIcon sx={{ fontSize: 40 }} />,
+      color: '#667eea'
     },
   ]
 
