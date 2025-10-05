@@ -3,10 +3,8 @@ import { Box, Container, Typography, Stack, IconButton, Alert, Snackbar, alpha, 
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import EmailIcon from '@mui/icons-material/Email'
-import TwitterIcon from '@mui/icons-material/Twitter'
+import XIcon from '@mui/icons-material/X';
 import LocationOnIcon from '@mui/icons-material/LocationOn'
-import PhoneIcon from '@mui/icons-material/Phone'
-import AlternateEmailIcon from '@mui/icons-material/AlternateEmail'
 import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact'
 
 function Contact() {
@@ -28,7 +26,7 @@ function Contact() {
       hoverColor: '#667eea'
     },
     { 
-      icon: <TwitterIcon />, 
+      icon: <XIcon />, 
       href: 'https://x.com/MiguelAlex2813', 
       label: 'Twitter',
       color: '#1DA1F2',
@@ -41,22 +39,12 @@ function Contact() {
       color: '#EA4335',
       hoverColor: '#d946ef'
     },
-  ]
-
-  const contactInfo = [
     {
-      icon: <LocationOnIcon sx={{ fontSize: 50 }} />,
-      title: 'Location',
-      value: 'Sinaloa, México',
-      color: '#667eea',
-      link: 'https://maps.google.com/?q=Mazatlan,Sinaloa,Mexico'
-    },
-    {
-      icon: <AlternateEmailIcon sx={{ fontSize: 50 }} />,
-      title: 'Email',
-      value: 'miguelalexisdi18@gmail.com',
-      color: '#d946ef',
-      link: 'mailto:miguelalexisdi18@gmail.com'
+      icon: <LocationOnIcon sx= {{ fontSize: 50}} />,
+      href: 'https://maps.google.com/?q=Mazatlan,Sinaloa,Mexico', 
+      label: 'Location',
+      color: '#61fabfff',
+      hoverColor: '#54bdafff'
     }
   ]
 
@@ -99,75 +87,8 @@ function Contact() {
           </Typography>
         </Box>
 
-        {/* Contact Cards */}
-        <Grid container spacing={3} sx={{ mb: 4 }}>
-          {contactInfo.map((info, index) => (
-            <Grid item xs={12} md={4} key={index}>
-              <Paper
-                component="a"
-                href={info.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                sx={{
-                  p: 4,
-                  background: `linear-gradient(135deg, ${alpha(info.color, 0.05)} 0%, ${alpha(info.color, 0.02)} 100%)`,
-                  border: `1px solid ${alpha(info.color, 0.2)}`,
-                  borderRadius: 3,
-                  textAlign: 'center',
-                  textDecoration: 'none',
-                  display: 'block',
-                  transition: 'all 0.3s ease',
-                  cursor: 'pointer',
-                  '&:hover': {
-                    transform: 'translateY(-10px)',
-                    boxShadow: `0 15px 35px ${alpha(info.color, 0.4)}`,
-                    border: `1px solid ${alpha(info.color, 0.5)}`,
-                  }
-                }}
-              >
-                <Box
-                  sx={{
-                    width: 100,
-                    height: 100,
-                    borderRadius: 3,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    background: `linear-gradient(135deg, ${info.color} 0%, ${alpha(info.color, 0.6)} 100%)`,
-                    color: '#fff',
-                    boxShadow: `0 8px 24px ${alpha(info.color, 0.4)}`,
-                    margin: '0 auto',
-                    mb: 3,
-                  }}
-                >
-                  {info.icon}
-                </Box>
-                <Typography
-                  variant="h6"
-                  sx={{
-                    fontWeight: 700,
-                    color: '#e0e0e0',
-                    mb: 1,
-                  }}
-                >
-                  {info.title}
-                </Typography>
-                <Typography
-                  variant="body1"
-                  sx={{
-                    color: '#b0b0b0',
-                    fontWeight: 500,
-                  }}
-                >
-                  {info.value}
-                </Typography>
-              </Paper>
-            </Grid>
-          ))}
-        </Grid>
-
         {/* Social Links */}
-        <Grid container spacing={3}>
+        <Grid container spacing={3} justifyContent="center">
           <Grid item xs={12} md={8}>
             <Paper
               sx={{

@@ -1,9 +1,21 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
 import { Box, Container } from '@mui/material'
 import Navbar from './Navbar'
 import Footer from './Footer'
+import { useEffect } from 'react'
 
 function Layout() {
+  const location = useLocation()
+
+  // Smooth scroll to top on route change
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    })
+  }, [location.pathname])
+
   return (
     <Box 
       sx={{ 

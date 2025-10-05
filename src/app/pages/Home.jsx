@@ -1,15 +1,17 @@
-import { Box, Typography, Button, Container, Stack, Avatar, Chip, Grid, Card, CardContent, IconButton, Fade, Zoom } from '@mui/material'
+import { Box, Typography, Button, Container, Stack, Chip, Grid, Card, CardContent, IconButton, Fade, Zoom } from '@mui/material'
 import { Link } from 'react-router-dom'
-import DownloadIcon from '@mui/icons-material/Download'
+import ArticleIcon from '@mui/icons-material/Article';
 import CodeIcon from '@mui/icons-material/Code'
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch'
 import EmailIcon from '@mui/icons-material/Email'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
-import TwitterIcon from '@mui/icons-material/Twitter'
+import XIcon from '@mui/icons-material/X';
 import WorkIcon from '@mui/icons-material/Work'
 import SchoolIcon from '@mui/icons-material/School'
 import EmojiObjectsIcon from '@mui/icons-material/EmojiEmotions'
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import ReactGA from 'react-ga4'
 
 function Home() {
   const technologies = [
@@ -20,25 +22,56 @@ function Home() {
 
   const stats = [
     { label: 'Experience', value: '18+', subtitle: 'Months Coding', icon: <WorkIcon /> },
-    { label: 'Technologies', value: '12+', subtitle: 'Mastered', icon: <CodeIcon /> },
-    { label: 'Projects', value: '4+', subtitle: 'Completed', icon: <RocketLaunchIcon /> },
+    { label: 'Technologies', value: '18+', subtitle: 'Mastered', icon: <CodeIcon /> },
+    { label: 'Projects', value: '6+', subtitle: 'Completed', icon: <RocketLaunchIcon /> },
   ]
 
   const socialLinks = [
     { icon: <GitHubIcon />, href: 'https://github.com/maniadiaz', label: 'GitHub' },
     { icon: <LinkedInIcon />, href: 'https://www.linkedin.com/in/miguel-alexis-diaz-diaz-aa0279315/', label: 'LinkedIn' },
     { icon: <EmailIcon />, href: 'mailto:miguelalexisdi18@gmail.com', label: 'Email' },
-    { icon: <TwitterIcon />, href: 'https://x.com/MiguelAlex2813', label: 'Twitter' },
+    { icon: <XIcon />, href: 'https://x.com/MiguelAlex2813', label: 'Twitter' },
   ]
 
-  const handleDownloadCV = () => {
-    const cvPath = './../../../public/CV/CV-Alexis-Diaz.pdf'
-    const link = document.createElement('a')
-    link.href = cvPath
-    link.download = 'CV-Miguel-Alexis-Diaz.pdf'
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
+  // Funciones para tracking de eventos
+  const handleProjectsClick = () => {
+    ReactGA.event({
+      category: 'Navigation',
+      action: 'Click',
+      label: 'View Projects Button'
+    })
+  }
+
+  const handleSkillsClick = () => {
+    ReactGA.event({
+      category: 'Navigation',
+      action: 'Click',
+      label: 'View Skills Button'
+    })
+  }
+
+  const handleContactClick = () => {
+    ReactGA.event({
+      category: 'Navigation',
+      action: 'Click',
+      label: 'Contact Me Button'
+    })
+  }
+
+  const handleAboutClick = () => {
+    ReactGA.event({
+      category: 'Navigation',
+      action: 'Click',
+      label: 'About Me (CV) Button'
+    })
+  }
+
+  const handleSocialClick = (platform) => {
+    ReactGA.event({
+      category: 'Social',
+      action: 'Click',
+      label: platform
+    })
   }
 
   return (
@@ -102,7 +135,7 @@ function Home() {
                     height: '156%',
                     objectFit: 'contain',
                     position: 'relative',
-                    mb:-2,
+                    mb: -2,
                     zIndex: 1,
                     filter: 'drop-shadow(0 0 20px rgba(102, 126, 234, 0.6))',
                   }}
@@ -180,7 +213,8 @@ function Home() {
                 }}
               />
               <Chip
-                label="📍 Mazatlán, Sinaloa, México"
+                icon={<LocationOnIcon />}
+                label="Mazatlán, Sinaloa, México"
                 sx={{
                   backgroundColor: 'rgba(118, 75, 162, 0.1)',
                   color: '#b0b0b0',
@@ -200,6 +234,7 @@ function Home() {
               <Button
                 component={Link}
                 to="/proyectos"
+                onClick={handleProjectsClick}
                 variant="contained"
                 size="large"
                 startIcon={<CodeIcon />}
@@ -226,6 +261,7 @@ function Home() {
               <Button
                 component={Link}
                 to="/habilidades"
+                onClick={handleSkillsClick}
                 variant="contained"
                 size="large"
                 startIcon={<EmojiObjectsIcon />}
@@ -250,56 +286,57 @@ function Home() {
               </Button>
 
               <Button
-                onClick={handleDownloadCV}
-                variant="outlined"
-                size="large"
-                startIcon={<DownloadIcon />}
-                sx={{
-                  borderColor: '#667eea',
-                  color: '#667eea',
-                  px: 4,
-                  py: 1.5,
-                  fontSize: '1rem',
-                  fontWeight: 600,
-                  borderRadius: 3,
-                  borderWidth: 2,
-                  transition: 'all 0.3s ease',
-                  '&:hover': {
-                    borderColor: '#764ba2',
-                    backgroundColor: 'rgba(102, 126, 234, 0.1)',
-                    borderWidth: 2,
-                    transform: 'translateY(-3px)',
-                  }
-                }}
-              >
-                Download CV
-              </Button>
-
-              <Button
                 component={Link}
                 to="/contacto"
-                variant="outlined"
+                onClick={handleContactClick}
+                variant="contained"
                 size="large"
                 startIcon={<EmailIcon />}
                 sx={{
-                  borderColor: '#764ba2',
-                  color: '#764ba2',
+                  background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+                  color: '#fff',
                   px: 4,
                   py: 1.5,
                   fontSize: '1rem',
                   fontWeight: 600,
                   borderRadius: 3,
-                  borderWidth: 2,
+                  boxShadow: '0 8px 24px rgba(16, 185, 129, 0.4)',
                   transition: 'all 0.3s ease',
                   '&:hover': {
-                    borderColor: '#667eea',
-                    backgroundColor: 'rgba(118, 75, 162, 0.1)',
-                    borderWidth: 2,
                     transform: 'translateY(-3px)',
+                    boxShadow: '0 12px 32px rgba(16, 185, 129, 0.6)',
+                    background: 'linear-gradient(135deg, #059669 0%, #10b981 100%)',
                   }
                 }}
               >
                 Contact Me
+              </Button>
+
+              <Button
+                component={Link}
+                to="/about"
+                onClick={handleAboutClick}
+                variant="contained"
+                size="large"
+                startIcon={<ArticleIcon />}
+                sx={{
+                  background: 'linear-gradient(135deg, #ffcb71ff 0%, #f0942bff 100%)',
+                  color: '#fff',
+                  px: 4,
+                  py: 1.5,
+                  fontSize: '1rem',
+                  fontWeight: 600,
+                  borderRadius: 3,
+                  boxShadow: '0 8px 24px rgba(245, 158, 11, 0.4)',
+                  transition: 'all 0.3s ease',
+                  '&:hover': {
+                    transform: 'translateY(-3px)',
+                    boxShadow: '0 12px 32px rgba(245, 158, 11, 0.6)',
+                    background: 'linear-gradient(135deg, #f0942bff 0%, #ffcb71ff 100%)',
+                  }
+                }}
+              >
+                About Me
               </Button>
             </Stack>
 
@@ -312,6 +349,7 @@ function Home() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => handleSocialClick(social.label)}
                   sx={{
                     color: '#808080',
                     backgroundColor: 'rgba(102, 126, 234, 0.05)',
@@ -331,7 +369,7 @@ function Home() {
         </Fade>
 
         {/* Stats Section */}
-        <Grid container spacing={3} sx={{ mb: 8 }}>
+        <Grid container spacing={3} justifyContent="center" sx={{ mb: 8 }}>
           {stats.map((stat, index) => (
             <Grid item xs={12} md={4} key={stat.label}>
               <Zoom in timeout={1000 + (index * 200)}>
@@ -342,6 +380,10 @@ function Home() {
                     border: '1px solid rgba(102, 126, 234, 0.2)',
                     borderRadius: 3,
                     transition: 'all 0.3s ease',
+                    height: '100%',
+                    display: 'flex',
+                    minWidth: 170,
+                    flexDirection: 'column',
                     '&:hover': {
                       transform: 'translateY(-8px)',
                       boxShadow: '0 12px 32px rgba(102, 126, 234, 0.3)',
@@ -349,7 +391,14 @@ function Home() {
                     }
                   }}
                 >
-                  <CardContent sx={{ textAlign: 'center', py: 4 }}>
+                  <CardContent sx={{
+                    textAlign: 'center',
+                    py: 4,
+                    flexGrow: 1,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                  }}>
                     <Box sx={{ color: '#667eea', mb: 2 }}>
                       {stat.icon}
                     </Box>

@@ -85,6 +85,33 @@ function Skills() {
     { name: 'CRUD Operations', icon: '✏️', color: '#667eea' },
   ]
 
+  const summaryStats = [
+    {
+      IconComponent: CodeIcon,
+      color: '#667eea',
+      value: '18+',
+      label: 'Technologies',
+    },
+    {
+      IconComponent: TerminalIcon,
+      color: '#764ba2',
+      value: '4',
+      label: 'Categories',
+    },
+    {
+      IconComponent: BuildIcon,
+      color: '#d946ef',
+      value: '18+',
+      label: 'Months Experience',
+    },
+    {
+      IconComponent: DevicesIcon,
+      color: '#10b981',
+      value: 'Full',
+      label: 'Stack Developer',
+    },
+  ];
+
   const currentCategory = skillCategories[selectedTab]
 
   return (
@@ -298,7 +325,7 @@ function Skills() {
           </Typography>
         </Box>
 
-        <Grid container spacing={2}>
+        <Grid container spacing={2} justifyContent="center">
           {architectureSkills.map((skill) => (
             <Grid item xs={6} sm={4} md={2} key={skill.name}>
               <Tooltip title={skill.name} arrow>
@@ -349,51 +376,24 @@ function Skills() {
           }}
         >
           <CardContent sx={{ p: 4 }}>
-            <Grid container spacing={4}>
-              <Grid item xs={12} md={3}>
-                <Box sx={{ textAlign: 'center' }}>
-                  <CodeIcon sx={{ fontSize: 50, color: '#667eea', mb: 1 }} />
-                  <Typography variant="h3" sx={{ fontWeight: 800, color: '#667eea' }}>
-                    12+
-                  </Typography>
-                  <Typography variant="body1" sx={{ color: '#909090' }}>
-                    Technologies
-                  </Typography>
-                </Box>
-              </Grid>
-              <Grid item xs={12} md={3}>
-                <Box sx={{ textAlign: 'center' }}>
-                  <TerminalIcon sx={{ fontSize: 50, color: '#764ba2', mb: 1 }} />
-                  <Typography variant="h3" sx={{ fontWeight: 800, color: '#764ba2' }}>
-                    4
-                  </Typography>
-                  <Typography variant="body1" sx={{ color: '#909090' }}>
-                    Categories
-                  </Typography>
-                </Box>
-              </Grid>
-              <Grid item xs={12} md={3}>
-                <Box sx={{ textAlign: 'center' }}>
-                  <BuildIcon sx={{ fontSize: 50, color: '#d946ef', mb: 1 }} />
-                  <Typography variant="h3" sx={{ fontWeight: 800, color: '#d946ef' }}>
-                    18+
-                  </Typography>
-                  <Typography variant="body1" sx={{ color: '#909090' }}>
-                    Months Experience
-                  </Typography>
-                </Box>
-              </Grid>
-              <Grid item xs={12} md={3}>
-                <Box sx={{ textAlign: 'center' }}>
-                  <DevicesIcon sx={{ fontSize: 50, color: '#10b981', mb: 1 }} />
-                  <Typography variant="h3" sx={{ fontWeight: 800, color: '#10b981' }}>
-                    Full
-                  </Typography>
-                  <Typography variant="body1" sx={{ color: '#909090' }}>
-                    Stack Developer
-                  </Typography>
-                </Box>
-              </Grid>
+            <Grid container spacing={4} justifyContent="center">
+              {summaryStats.map((stat) => {
+                const Icon = stat.IconComponent;
+
+                return (
+                  <Grid item xs={12} sm={6} md={3} key={stat.label}>
+                    <Box sx={{ textAlign: 'center' }}>
+                      <Icon sx={{ fontSize: 50, color: stat.color, mb: 1 }} />
+                      <Typography variant="h3" sx={{ fontWeight: 800, color: stat.color }}>
+                        {stat.value}
+                      </Typography>
+                      <Typography variant="body1" sx={{ color: '#909090' }}>
+                        {stat.label}
+                      </Typography>
+                    </Box>
+                  </Grid>
+                );
+              })}
             </Grid>
           </CardContent>
         </Card>

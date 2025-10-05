@@ -13,7 +13,7 @@ const navItems = [
   { name: 'PROJECTS', path: '/proyectos', icon: <CodeIcon /> },
   { name: 'SKILLS', path: '/habilidades', icon: <EmojiObjectsIcon /> },
   { name: 'CONTACT', path: '/contacto', icon: <ContactMailIcon /> },
-  { name: 'CV', path: '/cv', icon: <DescriptionIcon /> },
+  { name: 'ABOUT ME', path: '/about', icon: <DescriptionIcon /> },
 ]
 
 function Navbar() {

@@ -148,7 +148,6 @@ Features:
 ### Contact
 Multiple ways to get in touch:
 - **Location** - Mazatlán, Sinaloa, México
-- **Phone** - +52 669 238 9124 (WhatsApp available)
 - **Email** - miguelalexisdi18@gmail.com
 - **Social Media** - GitHub, LinkedIn, Twitter
 - **Availability Status** - Open for work indicator

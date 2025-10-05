@@ -1,5 +1,7 @@
+import { useEffect } from 'react'
 import { lazy, Suspense } from 'react'
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation  } from 'react-router-dom';
+import { initGA, logPageView } from './app/utils/analystic'
 import Layout from './app/components/Layout';
 
 import './App.css'
@@ -9,9 +11,19 @@ const Home = lazy(() => import('./app/pages/Home'))
 const Projects = lazy(() => import('./app/pages/Projects'))
 const Skills = lazy(() => import('./app/pages/Skills'))
 const Contact = lazy(() => import('./app/pages/Contact'))
-const CV = lazy(() => import('./app/pages/CV'))
+const About = lazy(() => import('./app/pages/About'))
 
 function App() {
+  const location = useLocation()
+
+  useEffect(() => {
+    initGA()
+  }, [])
+
+  useEffect(() => {
+    logPageView()
+  }, [location])
+
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
@@ -19,7 +31,7 @@ function App() {
         <Route path="proyectos" element={<Projects />} />
         <Route path="habilidades" element={<Skills />} />
         <Route path="contacto" element={<Contact />} />
-        <Route path="cv" element={<CV />} />
+        <Route path="about" element={<About />} />
       </Route>
     </Routes>
   )
