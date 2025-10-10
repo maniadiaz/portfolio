@@ -90,7 +90,7 @@ function Home() {
               py: 8,
             }}
           >
-            {/* Avatar/Profile */}
+            {/* Avatar/Profile
             <Zoom in timeout={1200}>
               <Box
                 sx={{
@@ -141,7 +141,7 @@ function Home() {
                   }}
                 />
               </Box>
-            </Zoom>
+            </Zoom> */}
 
             {/* Main Title */}
             <Typography

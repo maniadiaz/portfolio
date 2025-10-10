@@ -11,13 +11,13 @@ function Contact() {
   const [openSnackbar, setOpenSnackbar] = useState(false)
 
   const socialLinks = [
-    { 
-      icon: <GitHubIcon />, 
-      href: 'https://github.com/maniadiaz', 
-      label: 'GitHub',
-      color: '#333',
-      hoverColor: '#667eea'
-    },
+    // { 
+    //   icon: <GitHubIcon />, 
+    //   href: 'https://github.com/maniadiaz', 
+    //   label: 'GitHub',
+    //   color: '#333',
+    //   hoverColor: '#667eea'
+    // },
     { 
       icon: <LinkedInIcon />, 
       href: 'https://www.linkedin.com/in/miguel-alexis-diaz-diaz-aa0279315/', 
@@ -25,13 +25,13 @@ function Contact() {
       color: '#0077b5',
       hoverColor: '#667eea'
     },
-    { 
-      icon: <XIcon />, 
-      href: 'https://x.com/MiguelAlex2813', 
-      label: 'Twitter',
-      color: '#1DA1F2',
-      hoverColor: '#667eea'
-    },
+    // { 
+    //   icon: <XIcon />, 
+    //   href: 'https://x.com/MiguelAlex2813', 
+    //   label: 'Twitter',
+    //   color: '#1DA1F2',
+    //   hoverColor: '#667eea'
+    // },
     { 
       icon: <EmailIcon />, 
       href: 'mailto:miguelalexisdi18@gmail.com', 
