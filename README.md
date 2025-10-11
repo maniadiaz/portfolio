@@ -44,8 +44,6 @@ Visit the live site: **[alexisdiaz.nocompila.com.mx](https://alexisdiaz.nocompil
 ```
 portfolio-alexis/
 ├── public/
-│   ├── CV/
-│   │   └── CV-Alexis-Diaz.pdf
 │   └── logo.png
 ├── src/
 │   ├── components/
