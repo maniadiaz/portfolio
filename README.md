@@ -44,8 +44,6 @@ Visit the live site: **[alexisdiaz.nocompila.com.mx](https://alexisdiaz.nocompil
 ```
 portfolio-alexis/
 ├── public/
-│   ├── CV/
-│   │   └── CV-Alexis-Diaz.pdf
 │   └── logo.png
 ├── src/
 │   ├── components/
@@ -78,8 +76,8 @@ Make sure you have the following installed:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/maniadiaz/alexisdiaz-portafolio.git
-   cd alexisdiaz-portafolio
+   git clone https://github.com/maniadiaz/portfolio.git
+   cd portfolio
    ```
 
 2. **Install dependencies**
