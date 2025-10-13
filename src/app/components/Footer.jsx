@@ -8,7 +8,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite'
 function Footer() {
   const socialLinks = [
     { icon: <GitHubIcon />, href: 'https://github.com/maniadiaz', label: 'GitHub' },
-    { icon: <LinkedInIcon />, href: 'https://www.linkedin.com/in/miguel-alexis-diaz-diaz-aa0279315/', label: 'LinkedIn' },
+    { icon: <LinkedInIcon />, href: 'https://www.linkedin.com/in/alexisdiaz18/', label: 'LinkedIn' },
     { icon: <EmailIcon />, href: 'mailto:miguelalexisdi18@gmail.com', label: 'Email' },
     { icon: <XIcon />, href: 'https://x.com/MiguelAlex2813', label: 'Twitter' },
   ]

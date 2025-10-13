@@ -10,6 +10,7 @@ import './App.css'
 const Home = lazy(() => import('./app/pages/Home'))
 const Projects = lazy(() => import('./app/pages/Projects'))
 const Skills = lazy(() => import('./app/pages/Skills'))
+const Python = lazy(() => import('./app/pages/Python'))
 const Contact = lazy(() => import('./app/pages/Contact'))
 const About = lazy(() => import('./app/pages/About'))
 
@@ -30,6 +31,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="proyectos" element={<Projects />} />
         <Route path="habilidades" element={<Skills />} />
+        <Route path="python" element={< Python /> } />
         <Route path="contacto" element={<Contact />} />
         <Route path="about" element={<About />} />
       </Route>

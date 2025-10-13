@@ -20,7 +20,7 @@ function Contact() {
     // },
     { 
       icon: <LinkedInIcon />, 
-      href: 'https://www.linkedin.com/in/miguel-alexis-diaz-diaz-aa0279315/', 
+      href: 'https://www.linkedin.com/in/alexisdiaz18/', 
       label: 'LinkedIn',
       color: '#0077b5',
       hoverColor: '#667eea'

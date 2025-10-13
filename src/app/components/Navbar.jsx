@@ -6,12 +6,14 @@ import CodeIcon from '@mui/icons-material/Code'
 import EmojiObjectsIcon from '@mui/icons-material/EmojiObjects'
 import ContactMailIcon from '@mui/icons-material/ContactMail'
 import DescriptionIcon from '@mui/icons-material/Description'
+import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
 import { useState } from 'react'
 
 const navItems = [
   { name: 'HOME', path: '/', icon: <HomeIcon /> },
   { name: 'PROJECTS', path: '/proyectos', icon: <CodeIcon /> },
   { name: 'SKILLS', path: '/habilidades', icon: <EmojiObjectsIcon /> },
+  { name: 'PYTHON', path: '/python', icon: <IntegrationInstructionsIcon /> },
   { name: 'CONTACT', path: '/contacto', icon: <ContactMailIcon /> },
   { name: 'ABOUT ME', path: '/about', icon: <DescriptionIcon /> },
 ]
