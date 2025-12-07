@@ -1,4 +1,5 @@
-import { Box, Container, Typography, Card, CardContent, Chip, Stack, Grid, Divider, useTheme, alpha, Button } from '@mui/material'
+import { useState } from 'react'
+import { Box, Container, Typography, Card, CardContent, Chip, Stack, Grid, Divider, useTheme, alpha, Button, Tabs, Tab } from '@mui/material'
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday'
 import CodeIcon from '@mui/icons-material/Code'
 import StorageIcon from '@mui/icons-material/Storage'
@@ -14,13 +15,45 @@ import MapIcon from '@mui/icons-material/Map'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import BusinessIcon from '@mui/icons-material/Business'
 import PersonIcon from '@mui/icons-material/Person'
+import LanguageIcon from '@mui/icons-material/Language'
+import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions'
+import FolderIcon from '@mui/icons-material/Folder'
+import ThunderstormIcon from '@mui/icons-material/Thunderstorm'
 
 function Proyects() {
   const theme = useTheme()
+  const [selectedTab, setSelectedTab] = useState(0)
+
+  const handleTabChange = (event, newValue) => {
+    setSelectedTab(newValue)
+  }
 
   const projects = [
     {
       id: 1,
+      title: 'Micro-Savings API',
+      subtitle: 'RESTful API for Savings Management',
+      period: 'September 2025 - Present',
+      status: 'completed',
+      projectType: 'personal',
+      company: null,
+      githubLink: 'https://github.com/maniadiaz/Apis-Micro-Ahorros',
+      description: 'RESTful API built with Node.js, Express, and Sequelize for a micro-savings application. Enables users to register, login, manage profiles, create savings goals, and track their savings with secure JWT authentication.',
+      responsibilities: [
+        'Backend API development with Express.js and MVC architecture',
+        'Database design and ORM implementation with Sequelize migrations',
+        'User authentication system with JWT and bcrypt password hashing',
+        'CRUD operations for users, savings goals, and savings records management',
+        'RESTful endpoint design for authentication, users, goals, and savings',
+        'Environment configuration management with dotenv',
+        'API testing and deployment setup'
+      ],
+      technologies: ['Node.js', 'Express.js', 'Sequelize', 'MySQL', 'JWT', 'bcrypt', 'nodemon', 'dotenv'],
+      icon: <StorageIcon sx={{ fontSize: 40 }} />,
+      color: '#3b82f6',
+    },
+    {
+      id: 2,
       title: 'Micro-Savings Platform',
       subtitle: 'Financial Management System',
       period: 'September 2025 - Present',
@@ -41,7 +74,7 @@ function Proyects() {
       color: '#d946ef'
     },
     {
-      id: 2,
+      id: 3,
       title: 'Personal Portfolio Website',
       subtitle: 'Professional Frontend Showcase',
       period: 'October 2025',
@@ -65,7 +98,7 @@ function Proyects() {
       color: '#10b981'
     },
     {
-      id: 3,
+      id: 4,
       title: 'Push Notifications System',
       subtitle: 'Instituto Cultural de Occidente - Colegio Xaveriano de Mazatlán',
       period: 'August 2025',
@@ -85,7 +118,7 @@ function Proyects() {
       color: '#f59e0b'
     },
     {
-      id: 4,
+      id: 5,
       title: 'GPS & User Management Application',
       subtitle: 'Focused on Resellers',
       period: 'May 2025 - August 2025',
@@ -106,7 +139,7 @@ function Proyects() {
       color: '#764ba2'
     },
     {
-      id: 5,
+      id: 6,
       title: 'React with Google Maps API',
       subtitle: 'Location Mapping Practice Project',
       period: 'February 2025 - June 2025',
@@ -125,10 +158,10 @@ function Proyects() {
       ],
       technologies: ['React', 'React Router', 'Google Maps API', 'Material UI', 'JavaScript', 'Git'],
       icon: <MapIcon sx={{ fontSize: 40 }} />,
-      color: '#3b82f6'
+      color: '#4ff36aff'
     },
     {
-      id: 6,
+      id: 7,
       title: 'Online Degree System',
       subtitle: 'UAS - Faculty of Computer Science Mazatlán, Academic Department',
       period: 'August 2024 - March 2025',
@@ -145,8 +178,83 @@ function Proyects() {
       ],
       technologies: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript', 'MVC'],
       icon: <WebIcon sx={{ fontSize: 40 }} />,
-      color: '#667eea'
+      color: '#ff944dff'
     },
+  ]
+
+  const pythonProjects = [
+    {
+      id: 1,
+      title: 'DeployManager',
+      description: 'A deployment management tool designed to streamline and automate server deployment processes. Features include deployment tracking, status monitoring, and automated deployment workflows.',
+      period: 'Completed',
+      status: 'completed',
+      technologies: ['Python', 'Deployment', 'Automation', 'CLI'],
+      responsibilities: [
+        'Deployment automation and orchestration',
+        'Server status monitoring and tracking',
+        'Automated workflow management',
+        'Error logging and recovery mechanisms',
+        'Command-line interface for deployment operations'
+      ],
+      githubLink: 'https://github.com/maniadiaz/DeployManager',
+      color: '#3b82f6',
+      icon: <CloudIcon sx={{ fontSize: 40 }} />
+    },
+    {
+      id: 2,
+      title: 'Inventory API Python',
+      description: 'RESTful API for inventory management built with Python. Handles product management, stock tracking, and inventory operations. Demonstrates API design patterns and database integration.',
+      period: 'Completed',
+      status: 'completed',
+      technologies: ['Python', 'Flask', 'REST API', 'Database', 'JSON'],
+      responsibilities: [
+        'RESTful API endpoint design and implementation',
+        'Product and inventory database management',
+        'Stock tracking and reporting functionality',
+        'Error handling and validation',
+        'API documentation and usage examples'
+      ],
+      githubLink: 'https://github.com/maniadiaz/inventory-api-python',
+      color: '#8b5cf6',
+      icon: <StorageIcon sx={{ fontSize: 40 }} />
+    },
+    {
+      id: 3,
+      title: 'Python Weather App',
+      description: 'Weather application that fetches real-time weather data from APIs and displays forecasts. Shows integration with external APIs, data processing, and user interface creation.',
+      period: 'Completed',
+      status: 'completed',
+      technologies: ['Python', 'API Integration', 'Data Processing', 'CLI/GUI'],
+      responsibilities: [
+        'Weather API integration and data fetching',
+        'Real-time weather data processing',
+        'User-friendly interface for weather display',
+        'Forecast calculation and analysis',
+        'Error handling for API requests'
+      ],
+      githubLink: 'https://github.com/maniadiaz/python-weather-app',
+      color: '#10b981',
+      icon: <ThunderstormIcon sx={{ fontSize: 40 }} />
+    },
+    {
+      id: 4,
+      title: 'File Organizer',
+      description: 'Automatic file organization tool that categorizes and sorts files based on type and metadata. Demonstrates file system operations, automation, and efficient data processing in Python.',
+      period: 'Completed',
+      status: 'completed',
+      technologies: ['Python', 'File I/O', 'Automation', 'OS Operations'],
+      responsibilities: [
+        'File system scanning and analysis',
+        'Automatic file categorization by type',
+        'File sorting and organization logic',
+        'Metadata extraction and processing',
+        'Logging and operation tracking'
+      ],
+      githubLink: 'https://github.com/maniadiaz/organizador_archivos',
+      color: '#f59e0b',
+      icon: <FolderIcon sx={{ fontSize: 40 }} />
+    }
   ]
 
   const getProjectTypeLabel = (type) => {
@@ -163,7 +271,7 @@ function Proyects() {
   }
 
 
-  const stats = [
+  const webStats = [
     {
       value: '6',
       label: 'Projects Completed',
@@ -181,19 +289,49 @@ function Proyects() {
       border: '1px solid rgba(118, 75, 162, 0.2)',
     },
     {
-      value: '18+',
+      value: '10+',
       label: 'Months of Experience',
       IconComponent: CheckCircleIcon,
       color: '#d946ef',
       background: 'linear-gradient(135deg, rgba(217, 70, 239, 0.1) 0%, rgba(102, 126, 234, 0.1) 100%)',
       border: '1px solid rgba(217, 70, 239, 0.2)',
     },
-  ];
+  ]
+
+  const pythonStats = [
+    {
+      value: '4',
+      label: 'Projects Created',
+      IconComponent: IntegrationInstructionsIcon,
+      color: '#3b82f6',
+      background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%)',
+      border: '1px solid rgba(59, 130, 246, 0.2)',
+    },
+    {
+      value: '4',
+      label: 'Completed',
+      IconComponent: CheckCircleIcon,
+      color: '#8b5cf6',
+      background: 'linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%)',
+      border: '1px solid rgba(139, 92, 246, 0.2)',
+    },
+    {
+      value: '100%',
+      label: 'Open Source',
+      IconComponent: TrendingUpIcon,
+      color: '#10b981',
+      background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%)',
+      border: '1px solid rgba(16, 185, 129, 0.2)',
+    },
+  ]
+
+  const currentProjects = selectedTab === 0 ? projects : pythonProjects
+  const currentStats = selectedTab === 0 ? webStats : pythonStats
 
   return (
     <Container maxWidth="lg">
       {/* Header Section */}
-      <Box sx={{ textAlign: 'center', mb: 8 }}>
+      <Box sx={{ textAlign: 'center', mb: 6 }}>
         <Typography
           variant="h2"
           sx={{
@@ -213,15 +351,65 @@ function Proyects() {
             maxWidth: 700,
             mx: 'auto',
             lineHeight: 1.6,
+            mb: 4,
           }}
         >
           A collection of projects showcasing my full-stack development skills, from backend infrastructure to modern frontend interfaces
         </Typography>
+
+        {/* Tabs */}
+        <Box sx={{ display: 'flex', justifyContent: 'center', mb: 4 }}>
+          <Tabs
+            value={selectedTab}
+            onChange={handleTabChange}
+            sx={{
+              '& .MuiTabs-indicator': {
+                backgroundColor: '#667eea',
+                height: 3,
+              },
+            }}
+          >
+            <Tab
+              icon={<LanguageIcon />}
+              iconPosition="start"
+              label="Web Projects"
+              sx={{
+                color: '#808080',
+                fontWeight: 600,
+                fontSize: '1rem',
+                textTransform: 'none',
+                '&.Mui-selected': {
+                  color: '#667eea',
+                },
+                '&:hover': {
+                  color: '#667eea',
+                },
+              }}
+            />
+            <Tab
+              icon={<IntegrationInstructionsIcon />}
+              iconPosition="start"
+              label="Python Projects"
+              sx={{
+                color: '#808080',
+                fontWeight: 600,
+                fontSize: '1rem',
+                textTransform: 'none',
+                '&.Mui-selected': {
+                  color: '#8b5cf6',
+                },
+                '&:hover': {
+                  color: '#8b5cf6',
+                },
+              }}
+            />
+          </Tabs>
+        </Box>
       </Box>
 
       {/* Projects Grid */}
       <Stack spacing={5}>
-        {projects.map((project, index) => {
+        {currentProjects.map((project, index) => {
           const typeInfo = getProjectTypeLabel(project.projectType)
 
           return (
@@ -478,7 +666,7 @@ function Proyects() {
       {/* Stats Section */}
       <Box sx={{ mt: 8, textAlign: 'center' }}>
         <Grid container spacing={3} justifyContent="center">
-          {stats.map((stat) => {
+          {currentStats.map((stat) => {
             const Icon = stat.IconComponent;
 
             return (
@@ -491,7 +679,7 @@ function Proyects() {
                     border: stat.border,
                     height: '100%',
                     display: 'flex',
-                    minWidth:210,
+                    minWidth: 210,
                     flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',

@@ -101,7 +101,7 @@ function Skills() {
     {
       IconComponent: BuildIcon,
       color: '#d946ef',
-      value: '18+',
+      value: '10+',
       label: 'Months Experience',
     },
     {

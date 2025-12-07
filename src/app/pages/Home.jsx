@@ -21,7 +21,7 @@ function Home() {
   ]
 
   const stats = [
-    { label: 'Experience', value: '18+', subtitle: 'Months Coding', icon: <WorkIcon /> },
+    { label: 'Experience', value: '10+', subtitle: 'Months Coding', icon: <WorkIcon /> },
     { label: 'Technologies', value: '18+', subtitle: 'Mastered', icon: <CodeIcon /> },
     { label: 'Projects', value: '6+', subtitle: 'Completed', icon: <RocketLaunchIcon /> },
   ]
@@ -30,7 +30,6 @@ function Home() {
     { icon: <GitHubIcon />, href: 'https://github.com/maniadiaz', label: 'GitHub' },
     { icon: <LinkedInIcon />, href: 'https://www.linkedin.com/in/alexisdiaz18/', label: 'LinkedIn' },
     { icon: <EmailIcon />, href: 'mailto:miguelalexisdi18@gmail.com', label: 'Email' },
-    { icon: <XIcon />, href: 'https://x.com/MiguelAlex2813', label: 'Twitter' },
   ]
 
   // Funciones para tracking de eventos
@@ -283,33 +282,6 @@ function Home() {
                 }}
               >
                 View Skills
-              </Button>
-
-              <Button
-                component={Link}
-                to="/contacto"
-                onClick={handleContactClick}
-                variant="contained"
-                size="large"
-                startIcon={<EmailIcon />}
-                sx={{
-                  background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
-                  color: '#fff',
-                  px: 4,
-                  py: 1.5,
-                  fontSize: '1rem',
-                  fontWeight: 600,
-                  borderRadius: 3,
-                  boxShadow: '0 8px 24px rgba(16, 185, 129, 0.4)',
-                  transition: 'all 0.3s ease',
-                  '&:hover': {
-                    transform: 'translateY(-3px)',
-                    boxShadow: '0 12px 32px rgba(16, 185, 129, 0.6)',
-                    background: 'linear-gradient(135deg, #059669 0%, #10b981 100%)',
-                  }
-                }}
-              >
-                Contact Me
               </Button>
 
               <Button

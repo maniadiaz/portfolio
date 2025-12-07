@@ -10,7 +10,6 @@ function Footer() {
     { icon: <GitHubIcon />, href: 'https://github.com/maniadiaz', label: 'GitHub' },
     { icon: <LinkedInIcon />, href: 'https://www.linkedin.com/in/alexisdiaz18/', label: 'LinkedIn' },
     { icon: <EmailIcon />, href: 'mailto:miguelalexisdi18@gmail.com', label: 'Email' },
-    { icon: <XIcon />, href: 'https://x.com/MiguelAlex2813', label: 'Twitter' },
   ]
 
   return (
