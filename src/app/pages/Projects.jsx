@@ -32,9 +32,30 @@ function Proyects() {
   const projects = [
     {
       id: 1,
+      title: 'Micro-Savings Platform',
+      subtitle: 'Financial Management System',
+      period: 'September 2024 - Present',
+      status: 'in-progress',
+      projectType: 'personal',
+      company: null,
+      githubLink: 'coming-soon',
+      description: 'Complete savings management platform with VPS infrastructure, backend API, and modern frontend interface.',
+      responsibilities: [
+        'VPS management and configuration: Bind9, Nginx, PHP, MySQL, Node.js',
+        'Backend: API creation with Express and Sequelize',
+        'Frontend: Page design with React + Vite',
+        'API consumption through services using JavaScript',
+        'Complete infrastructure deployment and maintenance'
+      ],
+      technologies: ['React', 'Vite', 'Express', 'Sequelize', 'MySQL', 'Node.js', 'Nginx', 'VPS'],
+      icon: <CloudIcon sx={{ fontSize: 40 }} />,
+      color: '#d946ef'
+    },
+    {
+      id: 2,
       title: 'Micro-Savings API',
       subtitle: 'RESTful API for Savings Management',
-      period: 'September 2025 - Present',
+      period: 'September 2024',
       status: 'completed',
       projectType: 'personal',
       company: null,
@@ -54,52 +75,7 @@ function Proyects() {
       color: '#3b82f6',
     },
     {
-      id: 2,
-      title: 'Micro-Savings Platform',
-      subtitle: 'Financial Management System',
-      period: 'September 2025 - Present',
-      status: 'in-progress',
-      projectType: 'personal',
-      company: null,
-      githubLink: 'coming-soon',
-      description: 'Complete savings management platform with VPS infrastructure, backend API, and modern frontend interface.',
-      responsibilities: [
-        'VPS management and configuration: Bind9, Nginx, PHP, MySQL, Node.js',
-        'Backend: API creation with Express and Sequelize',
-        'Frontend: Page design with React + Vite',
-        'API consumption through services using JavaScript',
-        'Complete infrastructure deployment and maintenance'
-      ],
-      technologies: ['React', 'Vite', 'Express', 'Sequelize', 'MySQL', 'Node.js', 'Nginx', 'VPS'],
-      icon: <CloudIcon sx={{ fontSize: 40 }} />,
-      color: '#d946ef'
-    },
-    {
       id: 3,
-      title: 'Personal Portfolio Website',
-      subtitle: 'Professional Frontend Showcase',
-      period: 'October 2025',
-      status: 'completed',
-      projectType: 'personal',
-      company: null,
-      githubLink: 'https://github.com/maniadiaz/portfolio',
-      description: 'Modern and responsive portfolio website showcasing my skills, projects, and professional experience. Features interactive UI components and smooth animations.',
-      responsibilities: [
-        'Complete frontend development using React and Material UI',
-        'Implementation of React Router for seamless navigation',
-        'Design of multiple interactive sections: Home, Projects, Skills, Contact, and CV',
-        'Creation of responsive layouts optimized for all devices',
-        'Integration of PDF viewer for resume display',
-        'Custom color theming with gradient effects and animations',
-        'Contact form implementation with validation',
-        'Skills showcase with progress bars and interactive tabs'
-      ],
-      technologies: ['React', 'Vite', 'Material UI', 'React Router', 'JavaScript', 'CSS3', 'Responsive Design'],
-      icon: <WorkIcon sx={{ fontSize: 40 }} />,
-      color: '#10b981'
-    },
-    {
-      id: 4,
       title: 'Servi App',
       subtitle: 'AmericasIoT - Service Management Application',
       period: 'November 2024 - December 2024',
@@ -122,7 +98,51 @@ function Proyects() {
       color: '#ef4444'
     },
     {
+      id: 4,
+      title: 'Personal Portfolio Website',
+      subtitle: 'Professional Frontend Showcase',
+      period: 'October 2024',
+      status: 'completed',
+      projectType: 'personal',
+      company: null,
+      githubLink: 'https://github.com/maniadiaz/portfolio',
+      description: 'Modern and responsive portfolio website showcasing my skills, projects, and professional experience. Features interactive UI components and smooth animations.',
+      responsibilities: [
+        'Complete frontend development using React and Material UI',
+        'Implementation of React Router for seamless navigation',
+        'Design of multiple interactive sections: Home, Projects, Skills, Contact, and CV',
+        'Creation of responsive layouts optimized for all devices',
+        'Integration of PDF viewer for resume display',
+        'Custom color theming with gradient effects and animations',
+        'Contact form implementation with validation',
+        'Skills showcase with progress bars and interactive tabs'
+      ],
+      technologies: ['React', 'Vite', 'Material UI', 'React Router', 'JavaScript', 'CSS3', 'Responsive Design'],
+      icon: <WorkIcon sx={{ fontSize: 40 }} />,
+      color: '#10b981'
+    },
+    {
       id: 5,
+      title: 'Online Degree System',
+      subtitle: 'UAS - Faculty of Computer Science Mazatlán, Academic Department',
+      period: 'August 2024 - March 2025',
+      status: 'completed',
+      projectType: 'company',
+      company: 'UAS en Facultad Informática Mazatlán',
+      githubLink: null,
+      description: 'Complete web system for digital management of degree applications, optimizing the workflow and reducing manual workload for the academic department.',
+      responsibilities: [
+        'Frontend and Backend design and development under MVC architecture',
+        'Database creation and connection using PHP and MySQL',
+        'Web interface implementation for managing degree requests digitally',
+        'Workflow optimization to streamline the process and reduce manual load'
+      ],
+      technologies: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript', 'MVC'],
+      icon: <WebIcon sx={{ fontSize: 40 }} />,
+      color: '#ff944dff'
+    },
+    {
+      id: 6,
       title: 'Push Notifications System',
       subtitle: 'Instituto Cultural de Occidente - Colegio Xaveriano de Mazatlán',
       period: 'August 2024',
@@ -142,7 +162,7 @@ function Proyects() {
       color: '#f59e0b'
     },
     {
-      id: 6,
+      id: 7,
       title: 'GPS & User Management Application',
       subtitle: 'Focused on Resellers',
       period: 'May 2024 - August 2024',
@@ -163,7 +183,7 @@ function Proyects() {
       color: '#764ba2'
     },
     {
-      id: 7,
+      id: 8,
       title: 'React with Google Maps API',
       subtitle: 'Location Mapping Practice Project',
       period: 'February 2024 - June 2024',
@@ -183,26 +203,6 @@ function Proyects() {
       technologies: ['React', 'React Router', 'Google Maps API', 'Material UI', 'JavaScript', 'Git'],
       icon: <MapIcon sx={{ fontSize: 40 }} />,
       color: '#4ff36aff'
-    },
-    {
-      id: 8,
-      title: 'Online Degree System',
-      subtitle: 'UAS - Faculty of Computer Science Mazatlán, Academic Department',
-      period: 'August 2024 - March 2025',
-      status: 'completed',
-      projectType: 'company',
-      company: 'UAS en Facultad Informática Mazatlán',
-      githubLink: null,
-      description: 'Complete web system for digital management of degree applications, optimizing the workflow and reducing manual workload for the academic department.',
-      responsibilities: [
-        'Frontend and Backend design and development under MVC architecture',
-        'Database creation and connection using PHP and MySQL',
-        'Web interface implementation for managing degree requests digitally',
-        'Workflow optimization to streamline the process and reduce manual load'
-      ],
-      technologies: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript', 'MVC'],
-      icon: <WebIcon sx={{ fontSize: 40 }} />,
-      color: '#ff944dff'
     },
   ]
 
