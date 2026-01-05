@@ -15,15 +15,16 @@ import ReactGA from 'react-ga4'
 
 function Home() {
   const technologies = [
-    'React', 'JavaScript', 'TypeScript', 'Node.js',
-    'Express', 'Sequelize', 'C#', '.NET',
-    'PHP', 'MySQL', 'MariaDB', 'Git'
+    'React', 'Angular', 'JavaScript', 'TypeScript',
+    'Node.js', 'Express', 'Sequelize', 'C#',
+    '.NET', 'PHP', 'MySQL', 'Supabase',
+    'Ionic', 'Git'
   ]
 
   const stats = [
-    { label: 'Experience', value: '10+', subtitle: 'Months Coding', icon: <WorkIcon /> },
-    { label: 'Technologies', value: '18+', subtitle: 'Mastered', icon: <CodeIcon /> },
-    { label: 'Projects', value: '6+', subtitle: 'Completed', icon: <RocketLaunchIcon /> },
+    { label: 'Experience', value: '18+', subtitle: 'Months Coding', icon: <WorkIcon /> },
+    { label: 'Technologies', value: '20+', subtitle: 'Mastered', icon: <CodeIcon /> },
+    { label: 'Projects', value: '12+', subtitle: 'Completed', icon: <RocketLaunchIcon /> },
   ]
 
   const socialLinks = [

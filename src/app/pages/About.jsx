@@ -14,10 +14,10 @@ function About() {
     const highlights = [
         { icon: <WorkIcon sx={{ fontSize: 40 }} />, title: 'Full Stack Developer', description: 'Frontend & Backend expertise', color: '#667eea' },
         { icon: <SchoolIcon sx={{ fontSize: 40 }} />, title: 'B.S. in Information Systems', description: 'Engineering degree', color: '#764ba2' },
-        { icon: <CodeIcon sx={{ fontSize: 40 }} />, title: '12+ Technologies', description: 'Mastered and growing', color: '#d946ef' }
+        { icon: <CodeIcon sx={{ fontSize: 40 }} />, title: '20+ Technologies', description: 'Mastered and growing', color: '#d946ef' }
     ];
 
-    const skills = ['React', 'JavaScript', 'TypeScript', 'Node.js', 'Express', 'PHP', 'C#', '.NET', 'MySQL', 'Git', 'REST API', 'MVC'];
+    const skills = ['React', 'Angular', 'JavaScript', 'TypeScript', 'Node.js', 'Express', 'PHP', 'C#', '.NET', 'MySQL', 'Supabase', 'Ionic', 'Git', 'REST API', 'MVC'];
 
     const socialLinks = [
         {

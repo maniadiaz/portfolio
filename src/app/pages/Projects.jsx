@@ -19,6 +19,7 @@ import LanguageIcon from '@mui/icons-material/Language'
 import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions'
 import FolderIcon from '@mui/icons-material/Folder'
 import ThunderstormIcon from '@mui/icons-material/Thunderstorm'
+import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid'
 
 function Proyects() {
   const theme = useTheme()
@@ -99,9 +100,32 @@ function Proyects() {
     },
     {
       id: 4,
+      title: 'Servi App',
+      subtitle: 'AmericasIoT - Service Management Application',
+      period: 'November 2024 - December 2024',
+      status: 'completed',
+      projectType: 'company',
+      company: 'AmericasIoT',
+      githubLink: null,
+      description: 'Mobile service management application built with Angular, Ionic, and Supabase. Features real-time notifications and comprehensive service tracking capabilities for field operations.',
+      responsibilities: [
+        'Frontend development with Angular TypeScript and Ionic framework',
+        'View design and implementation with corresponding business logic',
+        'Backend development using Supabase for database and authentication',
+        'Push notification system implementation for real-time alerts',
+        'Integration of mobile-optimized UI/UX patterns',
+        'State management and data synchronization',
+        'Testing and deployment on mobile platforms'
+      ],
+      technologies: ['Angular', 'TypeScript', 'Ionic', 'Vite', 'Supabase', 'Push Notifications', 'Mobile Development'],
+      icon: <PhoneAndroidIcon sx={{ fontSize: 40 }} />,
+      color: '#ef4444'
+    },
+    {
+      id: 5,
       title: 'Push Notifications System',
       subtitle: 'Instituto Cultural de Occidente - Colegio Xaveriano de Mazatlán',
-      period: 'August 2025',
+      period: 'August 2024',
       status: 'completed',
       projectType: 'company',
       company: 'Certex',
@@ -118,10 +142,10 @@ function Proyects() {
       color: '#f59e0b'
     },
     {
-      id: 5,
+      id: 6,
       title: 'GPS & User Management Application',
       subtitle: 'Focused on Resellers',
-      period: 'May 2025 - August 2025',
+      period: 'May 2024 - August 2024',
       status: 'completed',
       projectType: 'freelance',
       company: 'Freelancer',
@@ -139,10 +163,10 @@ function Proyects() {
       color: '#764ba2'
     },
     {
-      id: 6,
+      id: 7,
       title: 'React with Google Maps API',
       subtitle: 'Location Mapping Practice Project',
-      period: 'February 2025 - June 2025',
+      period: 'February 2024 - June 2024',
       status: 'completed',
       projectType: 'personal',
       company: null,
@@ -161,7 +185,7 @@ function Proyects() {
       color: '#4ff36aff'
     },
     {
-      id: 7,
+      id: 8,
       title: 'Online Degree System',
       subtitle: 'UAS - Faculty of Computer Science Mazatlán, Academic Department',
       period: 'August 2024 - March 2025',
@@ -273,7 +297,7 @@ function Proyects() {
 
   const webStats = [
     {
-      value: '6',
+      value: '8',
       label: 'Projects Completed',
       IconComponent: TrendingUpIcon,
       color: '#667eea',
@@ -281,7 +305,7 @@ function Proyects() {
       border: '1px solid rgba(102, 126, 234, 0.2)',
     },
     {
-      value: '18+',
+      value: '20+',
       label: 'Technologies Used',
       IconComponent: StorageIcon,
       color: '#764ba2',
@@ -289,7 +313,7 @@ function Proyects() {
       border: '1px solid rgba(118, 75, 162, 0.2)',
     },
     {
-      value: '10+',
+      value: '18+',
       label: 'Months of Experience',
       IconComponent: CheckCircleIcon,
       color: '#d946ef',

@@ -27,13 +27,15 @@ function Skills() {
       icon: <WebIcon />,
       color: '#667eea',
       skills: [
-        { name: 'React', level: 85, experience: '7 months', icon: '⚛️' },
+        { name: 'React', level: 85, experience: '8 months', icon: '⚛️' },
+        { name: 'Angular', level: 75, experience: '2 months', icon: '🅰️' },
         { name: 'JavaScript', level: 90, experience: '18+ months', icon: '📜' },
-        { name: 'TypeScript', level: 75, experience: '5 months', icon: '💎' },
+        { name: 'TypeScript', level: 80, experience: '6 months', icon: '💎' },
         { name: 'HTML5', level: 95, experience: '18+ months', icon: '🌐' },
         { name: 'CSS3', level: 90, experience: '18+ months', icon: '🎨' },
-        { name: 'Vite', level: 85, experience: '7 months', icon: '⚡' },
-        { name: 'Material UI', level: 80, experience: '6 months', icon: '🎭' },
+        { name: 'Vite', level: 85, experience: '8 months', icon: '⚡' },
+        { name: 'Ionic', level: 75, experience: '2 months', icon: '📱' },
+        { name: 'Material UI', level: 80, experience: '7 months', icon: '🎭' },
       ]
     },
     {
@@ -58,6 +60,7 @@ function Skills() {
       skills: [
         { name: 'MySQL', level: 90, experience: '18+ months', icon: '🐬' },
         { name: 'MariaDB', level: 85, experience: '12 months', icon: '🦭' },
+        { name: 'Supabase', level: 75, experience: '2 months', icon: '⚡' },
         { name: 'SQLite', level: 80, experience: '8 months', icon: '📦' },
         { name: 'SQL', level: 90, experience: '18+ months', icon: '📊' },
       ]
@@ -89,7 +92,7 @@ function Skills() {
     {
       IconComponent: CodeIcon,
       color: '#667eea',
-      value: '18+',
+      value: '20+',
       label: 'Technologies',
     },
     {
@@ -101,7 +104,7 @@ function Skills() {
     {
       IconComponent: BuildIcon,
       color: '#d946ef',
-      value: '10+',
+      value: '18+',
       label: 'Months Experience',
     },
     {
