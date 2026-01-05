@@ -32,50 +32,6 @@ function Proyects() {
   const projects = [
     {
       id: 1,
-      title: 'Micro-Savings Platform',
-      subtitle: 'Financial Management System',
-      period: 'September 2024 - Present',
-      status: 'in-progress',
-      projectType: 'personal',
-      company: null,
-      githubLink: 'coming-soon',
-      description: 'Complete savings management platform with VPS infrastructure, backend API, and modern frontend interface.',
-      responsibilities: [
-        'VPS management and configuration: Bind9, Nginx, PHP, MySQL, Node.js',
-        'Backend: API creation with Express and Sequelize',
-        'Frontend: Page design with React + Vite',
-        'API consumption through services using JavaScript',
-        'Complete infrastructure deployment and maintenance'
-      ],
-      technologies: ['React', 'Vite', 'Express', 'Sequelize', 'MySQL', 'Node.js', 'Nginx', 'VPS'],
-      icon: <CloudIcon sx={{ fontSize: 40 }} />,
-      color: '#d946ef'
-    },
-    {
-      id: 2,
-      title: 'Micro-Savings API',
-      subtitle: 'RESTful API for Savings Management',
-      period: 'September 2024',
-      status: 'completed',
-      projectType: 'personal',
-      company: null,
-      githubLink: 'https://github.com/maniadiaz/Apis-Micro-Ahorros',
-      description: 'RESTful API built with Node.js, Express, and Sequelize for a micro-savings application. Enables users to register, login, manage profiles, create savings goals, and track their savings with secure JWT authentication.',
-      responsibilities: [
-        'Backend API development with Express.js and MVC architecture',
-        'Database design and ORM implementation with Sequelize migrations',
-        'User authentication system with JWT and bcrypt password hashing',
-        'CRUD operations for users, savings goals, and savings records management',
-        'RESTful endpoint design for authentication, users, goals, and savings',
-        'Environment configuration management with dotenv',
-        'API testing and deployment setup'
-      ],
-      technologies: ['Node.js', 'Express.js', 'Sequelize', 'MySQL', 'JWT', 'bcrypt', 'nodemon', 'dotenv'],
-      icon: <StorageIcon sx={{ fontSize: 40 }} />,
-      color: '#3b82f6',
-    },
-    {
-      id: 3,
       title: 'Servi App',
       subtitle: 'AmericasIoT - Service Management Application',
       period: 'November 2024 - December 2024',
@@ -96,6 +52,50 @@ function Proyects() {
       technologies: ['Angular', 'TypeScript', 'Ionic', 'Vite', 'Supabase', 'Push Notifications', 'Mobile Development'],
       icon: <PhoneAndroidIcon sx={{ fontSize: 40 }} />,
       color: '#ef4444'
+    },
+    {
+      id: 2,
+      title: 'Micro-Savings Platform',
+      subtitle: 'Financial Management System',
+      period: 'September 2024 - Present',
+      status: 'in-progress',
+      projectType: 'personal',
+      company: null,
+      githubLink: 'coming-soon',
+      description: 'Complete savings management platform with VPS infrastructure, backend API, and modern frontend interface.',
+      responsibilities: [
+        'VPS management and configuration: Bind9, Nginx, PHP, MySQL, Node.js',
+        'Backend: API creation with Express and Sequelize',
+        'Frontend: Page design with React + Vite',
+        'API consumption through services using JavaScript',
+        'Complete infrastructure deployment and maintenance'
+      ],
+      technologies: ['React', 'Vite', 'Express', 'Sequelize', 'MySQL', 'Node.js', 'Nginx', 'VPS'],
+      icon: <CloudIcon sx={{ fontSize: 40 }} />,
+      color: '#d946ef'
+    },
+    {
+      id: 3,
+      title: 'Micro-Savings API',
+      subtitle: 'RESTful API for Savings Management',
+      period: 'September 2024',
+      status: 'completed',
+      projectType: 'personal',
+      company: null,
+      githubLink: 'https://github.com/maniadiaz/Apis-Micro-Ahorros',
+      description: 'RESTful API built with Node.js, Express, and Sequelize for a micro-savings application. Enables users to register, login, manage profiles, create savings goals, and track their savings with secure JWT authentication.',
+      responsibilities: [
+        'Backend API development with Express.js and MVC architecture',
+        'Database design and ORM implementation with Sequelize migrations',
+        'User authentication system with JWT and bcrypt password hashing',
+        'CRUD operations for users, savings goals, and savings records management',
+        'RESTful endpoint design for authentication, users, goals, and savings',
+        'Environment configuration management with dotenv',
+        'API testing and deployment setup'
+      ],
+      technologies: ['Node.js', 'Express.js', 'Sequelize', 'MySQL', 'JWT', 'bcrypt', 'nodemon', 'dotenv'],
+      icon: <StorageIcon sx={{ fontSize: 40 }} />,
+      color: '#3b82f6',
     },
     {
       id: 4,
