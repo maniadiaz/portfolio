@@ -1,28 +1,44 @@
 import { Link, useLocation } from 'react-router-dom'
-import {AppBar, Toolbar, Typography, Button, Box, IconButton, Drawer, List, ListItem, ListItemButton, ListItemText, useTheme, useMediaQuery, Container } from '@mui/material'
+import {AppBar, Toolbar, Typography, Button, Box, IconButton, Drawer, List, ListItem, ListItemButton, ListItemText, useTheme, useMediaQuery, Container, Menu, MenuItem } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
 import HomeIcon from '@mui/icons-material/Home'
 import CodeIcon from '@mui/icons-material/Code'
 import EmojiObjectsIcon from '@mui/icons-material/EmojiObjects'
 import DescriptionIcon from '@mui/icons-material/Description'
-import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
+import LanguageIcon from '@mui/icons-material/Language'
 import { useState } from 'react'
-
-const navItems = [
-  { name: 'HOME', path: '/', icon: <HomeIcon /> },
-  { name: 'PROJECTS', path: '/proyectos', icon: <CodeIcon /> },
-  { name: 'SKILLS', path: '/habilidades', icon: <EmojiObjectsIcon /> },
-  { name: 'ABOUT ME', path: '/about', icon: <DescriptionIcon /> },
-]
+import { useTranslation } from 'react-i18next'
 
 function Navbar() {
+  const { t, i18n } = useTranslation()
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [anchorEl, setAnchorEl] = useState(null)
   const location = useLocation()
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('md'))
 
+  const navItems = [
+    { name: t('nav.home'), path: '/', icon: <HomeIcon /> },
+    { name: t('nav.projects'), path: '/proyectos', icon: <CodeIcon /> },
+    { name: t('nav.skills'), path: '/habilidades', icon: <EmojiObjectsIcon /> },
+    { name: t('nav.about'), path: '/about', icon: <DescriptionIcon /> },
+  ]
+
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen)
+  }
+
+  const handleLanguageClick = (event) => {
+    setAnchorEl(event.currentTarget)
+  }
+
+  const handleLanguageClose = () => {
+    setAnchorEl(null)
+  }
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng)
+    handleLanguageClose()
   }
 
   const drawer = (
@@ -77,6 +93,25 @@ function Navbar() {
             </ListItemButton>
           </ListItem>
         ))}
+        <ListItem disablePadding>
+          <ListItemButton
+            onClick={() => changeLanguage(i18n.language === 'es' ? 'en' : 'es')}
+            sx={{
+              color: '#e2e8f0',
+              mx: 2,
+              mb: 1,
+              borderRadius: 2,
+              background: 'linear-gradient(135deg, rgba(236, 72, 153, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%)',
+              border: '1px solid rgba(236, 72, 153, 0.2)',
+              '&:hover': {
+                backgroundColor: 'rgba(236, 72, 153, 0.15)',
+              }
+            }}
+          >
+            <Box sx={{ mr: 2, display: 'flex' }}><LanguageIcon /></Box>
+            <ListItemText primary={i18n.language === 'es' ? '🇺🇸 English' : '🇪🇸 Español'} />
+          </ListItemButton>
+        </ListItem>
       </List>
     </Box>
   )
@@ -135,7 +170,7 @@ function Navbar() {
             </Typography>
 
             {!isMobile && (
-              <Box sx={{ display: 'flex', gap: 0.5 }}>
+              <Box sx={{ display: 'flex', gap: 0.5, alignItems: 'center' }}>
                 {navItems.map((item) => (
                   <Button
                     key={item.name}
@@ -150,7 +185,7 @@ function Navbar() {
                       borderRadius: 2,
                       position: 'relative',
                       overflow: 'hidden',
-                      background: location.pathname === item.path 
+                      background: location.pathname === item.path
                         ? 'linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%)'
                         : 'transparent',
                       boxShadow: location.pathname === item.path
@@ -169,6 +204,76 @@ function Navbar() {
                     {item.name}
                   </Button>
                 ))}
+                <IconButton
+                  onClick={handleLanguageClick}
+                  sx={{
+                    color: '#cbd5e1',
+                    ml: 1,
+                    transition: 'all 0.3s ease',
+                    '&:hover': {
+                      color: '#fff',
+                      backgroundColor: 'rgba(236, 72, 153, 0.15)',
+                      transform: 'scale(1.1)',
+                    }
+                  }}
+                >
+                  <LanguageIcon />
+                </IconButton>
+                <Menu
+                  anchorEl={anchorEl}
+                  open={Boolean(anchorEl)}
+                  onClose={handleLanguageClose}
+                  PaperProps={{
+                    sx: {
+                      background: 'linear-gradient(135deg, #1e1b4b 0%, #312e81 100%)',
+                      border: '1px solid rgba(236, 72, 153, 0.2)',
+                      boxShadow: '0 4px 30px rgba(139, 92, 246, 0.3)',
+                    }
+                  }}
+                >
+                  <MenuItem
+                    onClick={() => changeLanguage('es')}
+                    selected={i18n.language === 'es'}
+                    sx={{
+                      color: '#cbd5e1',
+                      fontWeight: 600,
+                      '&:hover': {
+                        backgroundColor: 'rgba(236, 72, 153, 0.15)',
+                        color: '#fff',
+                      },
+                      '&.Mui-selected': {
+                        background: 'linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%)',
+                        color: '#fff',
+                        '&:hover': {
+                          background: 'linear-gradient(135deg, #db2777 0%, #7c3aed 100%)',
+                        }
+                      }
+                    }}
+                  >
+                    🇪🇸 Español
+                  </MenuItem>
+                  <MenuItem
+                    onClick={() => changeLanguage('en')}
+                    selected={i18n.language === 'en'}
+                    sx={{
+                      color: '#cbd5e1',
+                      fontWeight: 600,
+                      '&:hover': {
+                        backgroundColor: 'rgba(236, 72, 153, 0.15)',
+                        color: '#fff',
+                      },
+                      '&.Mui-selected': {
+                        background: 'linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%)',
+                        color: '#fff',
+                        '&:hover': {
+                          background: 'linear-gradient(135deg, #db2777 0%, #7c3aed 100%)',
+                        }
+                      }
+                    }}
+                  >
+                    🇺🇸 English
+                  </MenuItem>
+                </Menu>
               </Box>
             )}
           </Toolbar>

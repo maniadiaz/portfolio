@@ -1,19 +1,22 @@
 import { Box, Typography, Button, Container, Stack, Chip, Grid, Card, CardContent, IconButton, Fade, Zoom } from '@mui/material'
 import { Link } from 'react-router-dom'
-import ArticleIcon from '@mui/icons-material/Article';
+import ArticleIcon from '@mui/icons-material/Article'
 import CodeIcon from '@mui/icons-material/Code'
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch'
 import EmailIcon from '@mui/icons-material/Email'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
-import XIcon from '@mui/icons-material/X';
 import WorkIcon from '@mui/icons-material/Work'
 import SchoolIcon from '@mui/icons-material/School'
 import EmojiObjectsIcon from '@mui/icons-material/EmojiEmotions'
-import LocationOnIcon from '@mui/icons-material/LocationOn';
+import LocationOnIcon from '@mui/icons-material/LocationOn'
 import ReactGA from 'react-ga4'
+import { useTranslation } from 'react-i18next'
+import { motion } from 'framer-motion'
 
 function Home() {
+  const { t } = useTranslation()
+
   const technologies = [
     'React', 'Angular', 'JavaScript', 'TypeScript',
     'Node.js', 'Express', 'Sequelize', 'C#',
@@ -22,9 +25,9 @@ function Home() {
   ]
 
   const stats = [
-    { label: 'Experience', value: '18+', subtitle: 'Months Coding', icon: <WorkIcon /> },
-    { label: 'Technologies', value: '20+', subtitle: 'Mastered', icon: <CodeIcon /> },
-    { label: 'Projects', value: '12+', subtitle: 'Completed', icon: <RocketLaunchIcon /> },
+    { label: t('home.stats.experience'), value: t('home.stats.experienceValue'), subtitle: t('home.stats.experienceSubtitle'), icon: <WorkIcon /> },
+    { label: t('home.stats.technologies'), value: t('home.stats.technologiesValue'), subtitle: t('home.stats.technologiesSubtitle'), icon: <CodeIcon /> },
+    { label: t('home.stats.projects'), value: t('home.stats.projectsValue'), subtitle: t('home.stats.projectsSubtitle'), icon: <RocketLaunchIcon /> },
   ]
 
   const socialLinks = [
@@ -144,86 +147,116 @@ function Home() {
             </Zoom> */}
 
             {/* Main Title */}
-            <Typography
-              variant="h6"
-              sx={{
-                color: '#667eea',
-                fontWeight: 600,
-                mb: 1,
-                letterSpacing: 2,
-                textTransform: 'uppercase',
-              }}
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
             >
-              Hello, I'm
-            </Typography>
+              <Typography
+                variant="h6"
+                sx={{
+                  color: '#667eea',
+                  fontWeight: 600,
+                  mb: 1,
+                  letterSpacing: 2,
+                  textTransform: 'uppercase',
+                }}
+              >
+                {t('home.greeting')}
+              </Typography>
+            </motion.div>
 
-            <Typography
-              variant="h1"
-              sx={{
-                fontWeight: 800,
-                mb: 2,
-                fontSize: { xs: '2.5rem', md: '4rem' },
-                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                lineHeight: 1.2,
-              }}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
             >
-              Miguel Alexis Díaz
-            </Typography>
+              <Typography
+                variant="h1"
+                sx={{
+                  fontWeight: 800,
+                  mb: 2,
+                  fontSize: { xs: '2.5rem', md: '4rem' },
+                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  lineHeight: 1.2,
+                }}
+              >
+                {t('home.name')}
+              </Typography>
+            </motion.div>
 
-            <Typography
-              variant="h4"
-              sx={{
-                color: '#b0b0b0',
-                fontWeight: 500,
-                mb: 3,
-                fontSize: { xs: '1.5rem', md: '2rem' },
-              }}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
             >
-              Full Stack Developer
-            </Typography>
+              <Typography
+                variant="h4"
+                sx={{
+                  color: '#b0b0b0',
+                  fontWeight: 500,
+                  mb: 3,
+                  fontSize: { xs: '1.5rem', md: '2rem' },
+                }}
+              >
+                {t('home.title')}
+              </Typography>
+            </motion.div>
 
             {/* Subtitle/Tagline */}
-            <Typography
-              variant="h6"
-              sx={{
-                color: '#808080',
-                maxWidth: 600,
-                mb: 4,
-                lineHeight: 1.6,
-                fontStyle: 'italic',
-                fontSize: { xs: '1rem', md: '1.25rem' },
-              }}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
             >
-              "Building modern web solutions with clean code and creative design"
-            </Typography>
+              <Typography
+                variant="h6"
+                sx={{
+                  color: '#808080',
+                  maxWidth: 600,
+                  mb: 4,
+                  lineHeight: 1.6,
+                  fontStyle: 'italic',
+                  fontSize: { xs: '1rem', md: '1.25rem' },
+                }}
+              >
+                "{t('home.tagline')}"
+              </Typography>
+            </motion.div>
 
             {/* Location & Degree */}
-            <Stack direction="row" spacing={2} sx={{ mb: 4, flexWrap: 'wrap', justifyContent: 'center' }}>
-              <Chip
-                icon={<SchoolIcon />}
-                label="B.S. in Information Systems Engineering"
-                sx={{
-                  backgroundColor: 'rgba(102, 126, 234, 0.1)',
-                  color: '#b0b0b0',
-                  fontWeight: 500,
-                  px: 1,
-                  border: '1px solid rgba(102, 126, 234, 0.3)',
-                }}
-              />
-              <Chip
-                icon={<LocationOnIcon />}
-                label="Mazatlán, Sinaloa, México"
-                sx={{
-                  backgroundColor: 'rgba(118, 75, 162, 0.1)',
-                  color: '#b0b0b0',
-                  fontWeight: 500,
-                  px: 1,
-                  border: '1px solid rgba(118, 75, 162, 0.3)',
-                }}
-              />
-            </Stack>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+            >
+              <Stack direction="row" spacing={2} sx={{ mb: 4, flexWrap: 'wrap', justifyContent: 'center' }}>
+                <Chip
+                  icon={<SchoolIcon />}
+                  label={t('home.degree')}
+                  sx={{
+                    backgroundColor: 'rgba(102, 126, 234, 0.1)',
+                    color: '#b0b0b0',
+                    fontWeight: 500,
+                    px: 1,
+                    border: '1px solid rgba(102, 126, 234, 0.3)',
+                  }}
+                />
+                <Chip
+                  icon={<LocationOnIcon />}
+                  label={t('home.location')}
+                  sx={{
+                    backgroundColor: 'rgba(118, 75, 162, 0.1)',
+                    color: '#b0b0b0',
+                    fontWeight: 500,
+                    px: 1,
+                    border: '1px solid rgba(118, 75, 162, 0.3)',
+                  }}
+                />
+              </Stack>
+            </motion.div>
 
             {/* CTA Buttons */}
             <Stack
@@ -255,7 +288,7 @@ function Home() {
                   }
                 }}
               >
-                View Projects
+                {t('home.viewProjects')}
               </Button>
 
               <Button
@@ -282,7 +315,7 @@ function Home() {
                   }
                 }}
               >
-                View Skills
+                {t('home.viewSkills')}
               </Button>
 
               <Button
@@ -309,7 +342,7 @@ function Home() {
                   }
                 }}
               >
-                About Me
+                {t('home.aboutMe')}
               </Button>
             </Stack>
 
@@ -411,7 +444,7 @@ function Home() {
                 color: '#b0b0b0',
               }}
             >
-              Technologies I Work With
+              {t('home.technologiesTitle')}
             </Typography>
             <Stack
               direction="row"

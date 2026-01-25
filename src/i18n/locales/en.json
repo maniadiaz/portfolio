@@ -1,0 +1,330 @@
+{
+  "nav": {
+    "home": "HOME",
+    "projects": "PROJECTS",
+    "skills": "SKILLS",
+    "about": "ABOUT ME"
+  },
+  "home": {
+    "greeting": "Hello, I'm",
+    "name": "Miguel Alexis Díaz",
+    "title": "Full Stack Developer",
+    "tagline": "Building modern web solutions with clean code and creative design",
+    "degree": "B.S. in Information Systems Engineering",
+    "location": "Mazatlán, Sinaloa, México",
+    "viewProjects": "View Projects",
+    "viewSkills": "View Skills",
+    "aboutMe": "About Me",
+    "stats": {
+      "experience": "Experience",
+      "experienceValue": "18+",
+      "experienceSubtitle": "Months Coding",
+      "technologies": "Technologies",
+      "technologiesValue": "20+",
+      "technologiesSubtitle": "Mastered",
+      "projects": "Projects",
+      "projectsValue": "12+",
+      "projectsSubtitle": "Completed"
+    },
+    "technologiesTitle": "Technologies I Work With"
+  },
+  "projects": {
+    "title": "My Projects",
+    "subtitle": "A collection of projects showcasing my full-stack development skills, from backend infrastructure to modern frontend interfaces",
+    "webProjects": "Web Projects",
+    "pythonProjects": "Python Projects",
+    "completed": "COMPLETED",
+    "inProgress": "IN PROGRESS",
+    "personal": "Personal Project",
+    "company": "Company Project",
+    "freelance": "Freelance",
+    "responsibilities": "Key Responsibilities",
+    "technologies": "Technologies Used",
+    "viewGithub": "View on GitHub",
+    "comingSoon": "Coming Soon",
+    "stats": {
+      "webCompleted": "Projects Completed",
+      "webTech": "Technologies Used",
+      "webExperience": "Months of Experience",
+      "pythonCreated": "Projects Created",
+      "pythonCompleted": "Completed",
+      "pythonOpenSource": "Open Source"
+    },
+    "list": {
+      "serviapp": {
+        "title": "Servi App",
+        "subtitle": "AmericasIoT - Service Management Application",
+        "period": "November 2024 - December 2024",
+        "description": "Mobile service management application built with Angular, Ionic, and Supabase. Features real-time notifications and comprehensive service tracking capabilities for field operations.",
+        "responsibilities": [
+          "Frontend development with Angular TypeScript and Ionic framework",
+          "View design and implementation with corresponding business logic",
+          "Backend development using Supabase for database and authentication",
+          "Push notification system implementation for real-time alerts",
+          "Integration of mobile-optimized UI/UX patterns",
+          "State management and data synchronization",
+          "Testing and deployment on mobile platforms"
+        ]
+      },
+      "sims": {
+        "title": "SIM Management System",
+        "subtitle": "AmericasIoT - SIM Card Management System",
+        "period": "January 2026 - Present",
+        "description": "Complete SIM card management system using emnify API. Development of RESTful backend APIs and frontend for data management and export.",
+        "responsibilities": [
+          "Backend RESTful APIs development using emnify documentation",
+          "Creation of proprietary SIM management system",
+          "Frontend development consuming services",
+          "Data export to Excel functionality",
+          "Integration with external emnify services"
+        ]
+      },
+      "microSavings": {
+        "title": "Micro-Savings Platform",
+        "subtitle": "Financial Management System",
+        "period": "September 2024 - Present",
+        "description": "Complete savings management platform with VPS infrastructure, backend API, and modern frontend interface.",
+        "responsibilities": [
+          "VPS management and configuration: Bind9, Nginx, PHP, MySQL, Node.js",
+          "Backend: API creation with Express and Sequelize",
+          "Frontend: Page design with React + Vite",
+          "API consumption through services using JavaScript",
+          "Complete infrastructure deployment and maintenance"
+        ]
+      },
+      "microSavingsApi": {
+        "title": "Micro-Savings API",
+        "subtitle": "RESTful API for Savings Management",
+        "period": "September 2024",
+        "description": "RESTful API built with Node.js, Express, and Sequelize for a micro-savings application. Enables users to register, login, manage profiles, create savings goals, and track their savings with secure JWT authentication.",
+        "responsibilities": [
+          "Backend API development with Express.js and MVC architecture",
+          "Database design and ORM implementation with Sequelize migrations",
+          "User authentication system with JWT and bcrypt password hashing",
+          "CRUD operations for users, savings goals, and savings records management",
+          "RESTful endpoint design for authentication, users, goals, and savings",
+          "Environment configuration management with dotenv",
+          "API testing and deployment setup"
+        ]
+      },
+      "portfolio": {
+        "title": "Personal Portfolio Website",
+        "subtitle": "Professional Frontend Showcase",
+        "period": "October 2024",
+        "description": "Modern and responsive portfolio website showcasing my skills, projects, and professional experience. Features interactive UI components and smooth animations.",
+        "responsibilities": [
+          "Complete frontend development using React and Material UI",
+          "Implementation of React Router for seamless navigation",
+          "Design of multiple interactive sections: Home, Projects, Skills, Contact, and CV",
+          "Creation of responsive layouts optimized for all devices",
+          "Integration of PDF viewer for resume display",
+          "Custom color theming with gradient effects and animations",
+          "Contact form implementation with validation",
+          "Skills showcase with progress bars and interactive tabs"
+        ]
+      },
+      "onlineDegree": {
+        "title": "Online Degree System",
+        "subtitle": "UAS - Faculty of Computer Science Mazatlán, Academic Department",
+        "period": "August 2024 - March 2025",
+        "description": "Complete web system for digital management of degree applications, optimizing the workflow and reducing manual workload for the academic department.",
+        "responsibilities": [
+          "Frontend and Backend design and development under MVC architecture",
+          "Database creation and connection using PHP and MySQL",
+          "Web interface implementation for managing degree requests digitally",
+          "Workflow optimization to streamline the process and reduce manual load"
+        ]
+      },
+      "pushNotifications": {
+        "title": "Push Notifications System",
+        "subtitle": "Instituto Cultural de Occidente - Colegio Xaveriano de Mazatlán",
+        "period": "August 2024",
+        "description": "Implementation of push notification system for an educational institution, enabling real-time communication with students and staff through web notifications.",
+        "responsibilities": [
+          "UI design and implementation for push notification management section",
+          "Service Worker configuration for notification handling",
+          "Integration of subscription and unsubscription logic",
+          "Testing and deployment of notification delivery system"
+        ]
+      },
+      "gpsManagement": {
+        "title": "GPS & User Management Application",
+        "subtitle": "Focused on Resellers",
+        "period": "May 2024 - August 2024",
+        "description": "Mobile and web application for real-time management of GPS devices and users, with advanced features for resellers.",
+        "responsibilities": [
+          "Development of CRUD modules for user and GPS device management",
+          "Barcode reader implementation using phone camera",
+          "REST API integration and consumption for real-time data handling",
+          "Responsive design optimized for mobile and desktop devices",
+          "Development under SPA and PWA architecture, improving UX and enabling offline usage"
+        ]
+      },
+      "googleMaps": {
+        "title": "React with Google Maps API",
+        "subtitle": "Location Mapping Practice Project",
+        "period": "February 2024 - June 2024",
+        "description": "Practice project to learn React Router and Google Maps API integration, featuring navigation between pages and an interactive map showing the Faculty of Computer Science UAS Mazatlán location.",
+        "responsibilities": [
+          "Implementation of React Router for multi-page navigation",
+          "Integration of Google Maps API for location display",
+          "Creation of reusable components and routing structure",
+          "Development of Home, About, Contact, and Map pages",
+          "Material UI integration for consistent styling",
+          "Version control setup with Git and GitHub"
+        ]
+      },
+      "deployManager": {
+        "title": "DeployManager",
+        "period": "Completed",
+        "description": "A deployment management tool designed to streamline and automate server deployment processes. Features include deployment tracking, status monitoring, and automated deployment workflows.",
+        "responsibilities": [
+          "Deployment automation and orchestration",
+          "Server status monitoring and tracking",
+          "Automated workflow management",
+          "Error logging and recovery mechanisms",
+          "Command-line interface for deployment operations"
+        ]
+      },
+      "inventoryApi": {
+        "title": "Inventory API Python",
+        "period": "Completed",
+        "description": "RESTful API for inventory management built with Python. Handles product management, stock tracking, and inventory operations. Demonstrates API design patterns and database integration.",
+        "responsibilities": [
+          "RESTful API endpoint design and implementation",
+          "Product and inventory database management",
+          "Stock tracking and reporting functionality",
+          "Error handling and validation",
+          "API documentation and usage examples"
+        ]
+      },
+      "weatherApp": {
+        "title": "Python Weather App",
+        "period": "Completed",
+        "description": "Weather application that fetches real-time weather data from APIs and displays forecasts. Shows integration with external APIs, data processing, and user interface creation.",
+        "responsibilities": [
+          "Weather API integration and data fetching",
+          "Real-time weather data processing",
+          "User-friendly interface for weather display",
+          "Forecast calculation and analysis",
+          "Error handling for API requests"
+        ]
+      },
+      "fileOrganizer": {
+        "title": "File Organizer",
+        "period": "Completed",
+        "description": "Automatic file organization tool that categorizes and sorts files based on type and metadata. Demonstrates file system operations, automation, and efficient data processing in Python.",
+        "responsibilities": [
+          "File system scanning and analysis",
+          "Automatic file categorization by type",
+          "File sorting and organization logic",
+          "Metadata extraction and processing",
+          "Logging and operation tracking"
+        ]
+      },
+      "notificationService": {
+        "title": "Push Notification Service",
+        "subtitle": "AmericasIoT - Backend Service",
+        "period": "December 2025",
+        "description": "Creation of backend service for push notifications using Node.js, Express, Supabase, and Triggers.",
+        "responsibilities": [
+          "Backend service development with Node.js and Express",
+          "Integration with Supabase for data management",
+          "Implementation of triggers for automatic notifications",
+          "Push notification system configuration",
+          "Service testing and deployment"
+        ]
+      },
+      "deployManagerSSH": {
+        "title": "Deploy Manager SSH",
+        "subtitle": "Python Desktop Application",
+        "period": "October 2025",
+        "description": "Desktop application developed in Python with PyQt6 that provides a simple and intuitive graphical interface for deploying files and folders to a remote server via SSH.",
+        "responsibilities": [
+          "Graphical interface development with PyQt6",
+          "SSH connection management implementation",
+          "Authentication system with SSH keys",
+          "File and folder selection for deployment",
+          "Real-time progress bar",
+          "Persistent configuration in config.json",
+          "Logging system and connection testing"
+        ]
+      }
+    }
+  },
+  "skills": {
+    "title": "My Skills",
+    "subtitle": "A comprehensive overview of my tech stack and expertise",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Database",
+      "mobile": "Mobile",
+      "tools": "Tools"
+    },
+    "list": {
+      "javascript": "JavaScript",
+      "typescript": "TypeScript",
+      "react": "React",
+      "angular": "Angular",
+      "html": "HTML5",
+      "css": "CSS3",
+      "materialui": "Material UI",
+      "bootstrap": "Bootstrap",
+      "nodejs": "Node.js",
+      "express": "Express",
+      "php": "PHP",
+      "dotnet": ".NET",
+      "csharp": "C#",
+      "python": "Python",
+      "java": "Java",
+      "cpp": "C++",
+      "mysql": "MySQL",
+      "sqlite": "SQLite",
+      "supabase": "Supabase",
+      "sequelize": "Sequelize",
+      "mariadb": "MariaDB",
+      "androidJava": "Android (Java)",
+      "androidKotlin": "Android (Kotlin)",
+      "ionic": "Ionic",
+      "git": "Git",
+      "github": "GitHub",
+      "linux": "Linux",
+      "vite": "Vite",
+      "pwa": "PWA"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Learn more about my journey and experience",
+    "downloadCV": "Download CV",
+    "education": {
+      "title": "Education",
+      "university": "Universidad Autónoma de Sinaloa",
+      "faculty": "Faculty of Computer Science Mazatlán",
+      "degree": "Bachelor's Degree in Information Systems Engineering",
+      "period": "2021 - 2025"
+    },
+    "contact": {
+      "title": "Contact",
+      "phone": "6692389124",
+      "email": "miguelalexisdi18@gmail.com",
+      "location": "Mazatlán, Sinaloa"
+    },
+    "references": {
+      "title": "References",
+      "ref1": {
+        "name": "Lic. José Monroy",
+        "phone": "694 110 3946"
+      },
+      "ref2": {
+        "name": "M.C. Juan Rodríguez Malpica",
+        "phone": "669 113 0351"
+      },
+      "ref3": {
+        "name": "M.D.O.C. Christian Martínez",
+        "phone": "669 268 3667"
+      }
+    }
+  }
+}
