@@ -20,10 +20,10 @@
       "experienceValue": "18+",
       "experienceSubtitle": "Months Coding",
       "technologies": "Technologies",
-      "technologiesValue": "20+",
+      "technologiesValue": "25+",
       "technologiesSubtitle": "Mastered",
       "projects": "Projects",
-      "projectsValue": "12+",
+      "projectsValue": "15+",
       "projectsSubtitle": "Completed"
     },
     "technologiesTitle": "Technologies I Work With"
@@ -43,7 +43,7 @@
     "viewGithub": "View on GitHub",
     "comingSoon": "Coming Soon",
     "stats": {
-      "webCompleted": "Projects Completed",
+      "webCompleted": "Web Projects Completed",
       "webTech": "Technologies Used",
       "webExperience": "Months of Experience",
       "pythonCreated": "Projects Created",
@@ -248,6 +248,49 @@
           "Real-time progress bar",
           "Persistent configuration in config.json",
           "Logging system and connection testing"
+        ]
+      },
+      "cvGeneratorFrontend": {
+        "title": "CV Generator - Frontend",
+        "subtitle": "Professional CV Creation Web Application",
+        "period": "January 2026 - February 2026",
+        "description": "Modern and comprehensive web application for creating, customizing, and exporting professional CVs. Features multiple templates (Harvard Classic, Harvard Modern, Oxford), 10+ color schemes organized by categories, bilingual system (ES/EN), light/dark mode, and PDF export. Architecture based on React + TypeScript with Redux Toolkit for state management.",
+        "responsibilities": [
+          "Complete frontend development with React 18.3 and TypeScript 5.6",
+          "State architecture with Redux Toolkit 2.5",
+          "JWT authentication system with refresh tokens",
+          "Implementation of 3 professional CV templates",
+          "Customization system with 10 color schemes",
+          "Complete internationalization with react-i18next (ES/EN)",
+          "Light/dark theme implementation with Material-UI 6.2",
+          "Interactive dashboard with profile statistics",
+          "PDF export and preview system",
+          "Progressive Web App (PWA) with Workbox",
+          "Complete integration with RESTful backend API",
+          "Form validation and error handling",
+          "Responsive design optimized for all devices"
+        ]
+      },
+      "cvGeneratorBackend": {
+        "title": "CV Generator - Backend API",
+        "subtitle": "RESTful API for CV Generation",
+        "period": "January 2026 - February 2026",
+        "description": "Complete RESTful API for managing and generating professional CVs. Robust system with JWT authentication, multiple templates, color customization, and PDF generation with Puppeteer. Includes 33 predefined skill categories, comprehensive Joi validation, rate limiting, Winston logging, and configured CORS. Deployed to production with PM2.",
+        "responsibilities": [
+          "RESTful API development with Node.js and Express",
+          "MySQL database design and implementation with Sequelize ORM",
+          "Complete authentication system with JWT and refresh tokens",
+          "Implementation of 3 CV templates (Harvard Classic, Modern, Oxford)",
+          "Color scheme system with 10 professional options",
+          "Dynamic PDF generation with Puppeteer",
+          "33 predefined skill categories for different industries",
+          "Robust data validation with Joi across all endpoints",
+          "Security implementation: Helmet, CORS, Rate Limiting, Bcrypt",
+          "Logging system with Winston for development and production",
+          "Database migrations and seeders",
+          "Complete profile management: personal info, experience, education, skills, languages, certifications",
+          "Production deployment with PM2 and VPS configuration",
+          "Complete API documentation and usage guides"
         ]
       }
     }

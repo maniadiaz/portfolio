@@ -20,10 +20,10 @@
       "experienceValue": "18+",
       "experienceSubtitle": "Meses Programando",
       "technologies": "Tecnologías",
-      "technologiesValue": "20+",
+      "technologiesValue": "25+",
       "technologiesSubtitle": "Dominadas",
       "projects": "Proyectos",
-      "projectsValue": "12+",
+      "projectsValue": "15+",
       "projectsSubtitle": "Completados"
     },
     "technologiesTitle": "Tecnologías con las que Trabajo"
@@ -43,7 +43,7 @@
     "viewGithub": "Ver en GitHub",
     "comingSoon": "Próximamente",
     "stats": {
-      "webCompleted": "Proyectos Completados",
+      "webCompleted": "Proyectos Web Completados",
       "webTech": "Tecnologías Usadas",
       "webExperience": "Meses de Experiencia",
       "pythonCreated": "Proyectos Creados",
@@ -248,6 +248,49 @@
           "Barra de progreso en tiempo real",
           "Configuración persistente en config.json",
           "Sistema de logs y prueba de conexión"
+        ]
+      },
+      "cvGeneratorFrontend": {
+        "title": "CV Generator - Frontend",
+        "subtitle": "Aplicación Web para Generación de CVs Profesionales",
+        "period": "Enero 2026 - Febrero 2026",
+        "description": "Aplicación web moderna y completa para la creación, personalización y exportación de CVs profesionales. Incluye múltiples plantillas (Harvard Classic, Harvard Modern, Oxford), 10+ esquemas de colores organizados por categorías, sistema bilingüe (ES/EN), modo claro/oscuro, y exportación a PDF. Arquitectura basada en React + TypeScript con Redux Toolkit para gestión de estado.",
+        "responsibilities": [
+          "Desarrollo frontend completo con React 18.3 y TypeScript 5.6",
+          "Arquitectura de estado con Redux Toolkit 2.5",
+          "Sistema de autenticación JWT con refresh tokens",
+          "Implementación de 3 plantillas profesionales de CV",
+          "Sistema de personalización con 10 esquemas de colores",
+          "Internacionalización completa con react-i18next (ES/EN)",
+          "Implementación de tema claro/oscuro con Material-UI 6.2",
+          "Dashboard interactivo con estadísticas de perfiles",
+          "Sistema de exportación y preview de PDF",
+          "Progressive Web App (PWA) con Workbox",
+          "Integración completa con backend API RESTful",
+          "Validación de formularios y manejo de errores",
+          "Diseño responsive optimizado para todos los dispositivos"
+        ]
+      },
+      "cvGeneratorBackend": {
+        "title": "CV Generator - Backend API",
+        "subtitle": "API RESTful para Generación de CVs",
+        "period": "Enero 2026 - Febrero 2026",
+        "description": "API RESTful completa para la gestión y generación de CVs profesionales. Sistema robusto con autenticación JWT, múltiples templates, personalización de colores, y generación de PDFs con Puppeteer. Incluye 33 categorías de skills predefinidas, validación exhaustiva con Joi, rate limiting, logging con Winston, y CORS configurado. Desplegado en producción con PM2.",
+        "responsibilities": [
+          "Desarrollo de API RESTful con Node.js y Express",
+          "Diseño e implementación de base de datos MySQL con Sequelize ORM",
+          "Sistema de autenticación completo con JWT y refresh tokens",
+          "Implementación de 3 plantillas de CV (Harvard Classic, Modern, Oxford)",
+          "Sistema de esquemas de colores con 10 opciones profesionales",
+          "Generación dinámica de PDFs con Puppeteer",
+          "33 categorías de skills predefinidas para diferentes industrias",
+          "Validación robusta de datos con Joi en todos los endpoints",
+          "Implementación de seguridad: Helmet, CORS, Rate Limiting, Bcrypt",
+          "Sistema de logging con Winston para desarrollo y producción",
+          "Migraciones de base de datos y seeders",
+          "Gestión completa de perfiles: información personal, experiencia, educación, skills, idiomas, certificaciones",
+          "Deployment en producción con PM2 y configuración de VPS",
+          "Documentación completa de API y guías de uso"
         ]
       }
     }

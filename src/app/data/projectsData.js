@@ -9,10 +9,42 @@ import MapIcon from '@mui/icons-material/Map'
 import ThunderstormIcon from '@mui/icons-material/Thunderstorm'
 import FolderIcon from '@mui/icons-material/Folder'
 import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions'
+import DescriptionIcon from '@mui/icons-material/Description'
+import ApiIcon from '@mui/icons-material/Api'
 
 export const getWebProjects = (t) => [
   {
     id: 1,
+    title: t('projects.list.cvGeneratorFrontend.title'),
+    subtitle: t('projects.list.cvGeneratorFrontend.subtitle'),
+    period: t('projects.list.cvGeneratorFrontend.period'),
+    status: 'completed',
+    projectType: 'personal',
+    company: null,
+    githubLink: null,
+    description: t('projects.list.cvGeneratorFrontend.description'),
+    responsibilities: t('projects.list.cvGeneratorFrontend.responsibilities', { returnObjects: true }),
+    technologies: ['React', 'TypeScript', 'Redux Toolkit', 'Material-UI', 'Vite', 'react-i18next', 'PWA', 'Axios', 'React Router'],
+    icon: DescriptionIcon,
+    color: '#1976d2'
+  },
+  {
+    id: 2,
+    title: t('projects.list.cvGeneratorBackend.title'),
+    subtitle: t('projects.list.cvGeneratorBackend.subtitle'),
+    period: t('projects.list.cvGeneratorBackend.period'),
+    status: 'completed',
+    projectType: 'personal',
+    company: null,
+    githubLink: null,
+    description: t('projects.list.cvGeneratorBackend.description'),
+    responsibilities: t('projects.list.cvGeneratorBackend.responsibilities', { returnObjects: true }),
+    technologies: ['Node.js', 'Express', 'Sequelize', 'MySQL', 'JWT', 'Puppeteer', 'Winston', 'Joi', 'PM2', 'Bcrypt'],
+    icon: ApiIcon,
+    color: '#2e7d32'
+  },
+  {
+    id: 3,
     title: t('projects.list.serviapp.title'),
     subtitle: t('projects.list.serviapp.subtitle'),
     period: t('projects.list.serviapp.period'),
@@ -27,7 +59,7 @@ export const getWebProjects = (t) => [
     color: '#ef4444'
   },
   {
-    id: 2,
+    id: 4,
     title: t('projects.list.sims.title'),
     subtitle: t('projects.list.sims.subtitle'),
     period: t('projects.list.sims.period'),
@@ -42,7 +74,7 @@ export const getWebProjects = (t) => [
     color: '#3b82f6'
   },
   {
-    id: 3,
+    id: 5,
     title: t('projects.list.microSavings.title'),
     subtitle: t('projects.list.microSavings.subtitle'),
     period: t('projects.list.microSavings.period'),
@@ -57,7 +89,7 @@ export const getWebProjects = (t) => [
     color: '#d946ef'
   },
   {
-    id: 4,
+    id: 6,
     title: t('projects.list.microSavingsApi.title'),
     subtitle: t('projects.list.microSavingsApi.subtitle'),
     period: t('projects.list.microSavingsApi.period'),
@@ -72,7 +104,7 @@ export const getWebProjects = (t) => [
     color: '#3b82f6',
   },
   {
-    id: 5,
+    id: 7,
     title: t('projects.list.portfolio.title'),
     subtitle: t('projects.list.portfolio.subtitle'),
     period: t('projects.list.portfolio.period'),
@@ -87,7 +119,7 @@ export const getWebProjects = (t) => [
     color: '#10b981'
   },
   {
-    id: 6,
+    id: 8,
     title: t('projects.list.onlineDegree.title'),
     subtitle: t('projects.list.onlineDegree.subtitle'),
     period: t('projects.list.onlineDegree.period'),
@@ -102,7 +134,7 @@ export const getWebProjects = (t) => [
     color: '#ff944dff'
   },
   {
-    id: 7,
+    id: 9,
     title: t('projects.list.pushNotifications.title'),
     subtitle: t('projects.list.pushNotifications.subtitle'),
     period: t('projects.list.pushNotifications.period'),
@@ -117,7 +149,7 @@ export const getWebProjects = (t) => [
     color: '#f59e0b'
   },
   {
-    id: 8,
+    id: 10,
     title: t('projects.list.gpsManagement.title'),
     subtitle: t('projects.list.gpsManagement.subtitle'),
     period: t('projects.list.gpsManagement.period'),
@@ -132,7 +164,7 @@ export const getWebProjects = (t) => [
     color: '#764ba2'
   },
   {
-    id: 9,
+    id: 11,
     title: t('projects.list.googleMaps.title'),
     subtitle: t('projects.list.googleMaps.subtitle'),
     period: t('projects.list.googleMaps.period'),
@@ -201,7 +233,7 @@ export const getPythonProjects = (t) => [
 
 export const getWebStats = (t) => [
   {
-    value: '9',
+    value: '11',
     label: t('projects.stats.webCompleted'),
     IconComponent: IntegrationInstructionsIcon,
     color: '#667eea',
