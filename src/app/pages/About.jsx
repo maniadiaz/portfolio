@@ -44,17 +44,75 @@ function About() {
     ];
 
     return (
-        <Box sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-            <Container maxWidth="xl" sx={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', }}>
+        <Box sx={{ position: 'relative', overflow: 'hidden', minHeight: '100vh' }}>
+            {/* Animated Background Elements */}
+            <Box
+                sx={{
+                    position: 'absolute',
+                    top: '10%',
+                    right: '10%',
+                    width: 350,
+                    height: 350,
+                    borderRadius: '50%',
+                    background: 'radial-gradient(circle, rgba(102, 126, 234, 0.12) 0%, transparent 70%)',
+                    filter: 'blur(70px)',
+                    animation: 'float 10s ease-in-out infinite',
+                    zIndex: 0,
+                }}
+            />
+            <Box
+                sx={{
+                    position: 'absolute',
+                    bottom: '15%',
+                    left: '8%',
+                    width: 300,
+                    height: 300,
+                    borderRadius: '50%',
+                    background: 'radial-gradient(circle, rgba(217, 70, 239, 0.12) 0%, transparent 70%)',
+                    filter: 'blur(70px)',
+                    animation: 'float 13s ease-in-out infinite',
+                    animationDelay: '3s',
+                    zIndex: 0,
+                }}
+            />
+
+            <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 1, flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', py: 6 }}>
                 {/* Header */}
-                <Box sx={{ textAlign: 'center', mb: 3 }}>
+                <Box sx={{ textAlign: 'center', mb: 5 }}>
+                    <Box
+                        sx={{
+                            display: 'inline-block',
+                            px: 4,
+                            py: 1.5,
+                            mb: 3,
+                            borderRadius: 4,
+                            background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(217, 70, 239, 0.15) 100%)',
+                            backdropFilter: 'blur(10px)',
+                            border: '1px solid rgba(102, 126, 234, 0.3)',
+                            boxShadow: '0 8px 32px rgba(102, 126, 234, 0.2)',
+                        }}
+                    >
+                        <Typography
+                            variant="overline"
+                            sx={{
+                                background: 'linear-gradient(135deg, #667eea 0%, #d946ef 100%)',
+                                WebkitBackgroundClip: 'text',
+                                WebkitTextFillColor: 'transparent',
+                                fontWeight: 700,
+                                letterSpacing: 3,
+                                fontSize: '0.9rem',
+                            }}
+                        >
+                            Professional Profile
+                        </Typography>
+                    </Box>
                     <Stack direction="row" spacing={2} justifyContent="center" alignItems="center" sx={{ mb: 2 }}>
-                        <DescriptionIcon sx={{ fontSize: 50, background: 'linear-gradient(135deg, #667eea 0%, #d946ef 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }} />
-                        <Typography variant="h2" sx={{ fontWeight: {xs:300, lg:800}, background: 'linear-gradient(135deg, #667eea 0%, #d946ef 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+                        <DescriptionIcon sx={{ fontSize: 60, background: 'linear-gradient(135deg, #667eea 0%, #d946ef 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }} />
+                        <Typography variant="h2" sx={{ fontWeight: 900, fontSize: { xs: '2.5rem', md: '3.5rem' }, background: 'linear-gradient(135deg, #667eea 0%, #8b5cf6 50%, #d946ef 100%)', backgroundSize: '200% 200%', animation: 'gradientShift 5s ease infinite', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', letterSpacing: -1 }}>
                             About Me
                         </Typography>
                     </Stack>
-                    <Typography variant="h6" sx={{ color: '#808080', mb: 3 }}>
+                    <Typography variant="h6" sx={{ color: '#a0a0a0', mb: 3, fontSize: { xs: '1rem', md: '1.15rem' } }}>
                         View my professional information
                     </Typography>
                 </Box>
@@ -62,11 +120,11 @@ function About() {
                 <Grid container spacing={3} justifyContent="center" sx={{ flex: 1 }}>
                     {highlights.map((item, index) => (
                         <Grid item xs={12} md={4} key={index}>
-                            <Card sx={{ background: `linear-gradient(135deg, ${alpha(item.color, 0.05)} 0%, ${alpha(item.color, 0.02)} 100%)`, border: `1px solid ${alpha(item.color, 0.2)}`, borderRadius: 3, transition: 'all 0.3s ease', height: '100%', '&:hover': { transform: 'translateY(-5px)', boxShadow: `0 12px 30px ${alpha(item.color, 0.3)}` } }}>
-                                <CardContent sx={{ p: 2.5 }}>
+                            <Card sx={{ background: `linear-gradient(135deg, ${alpha(item.color, 0.08)} 0%, ${alpha(item.color, 0.03)} 100%)`, backdropFilter: 'blur(20px)', border: `2px solid ${alpha(item.color, 0.25)}`, borderRadius: 4, transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)', height: '100%', boxShadow: `0 8px 32px ${alpha(item.color, 0.15)}`, '&:hover': { transform: 'translateY(-8px) scale(1.02)', boxShadow: `0 20px 40px ${alpha(item.color, 0.35)}`, border: `2px solid ${alpha(item.color, 0.5)}` } }}>
+                                <CardContent sx={{ p: 3.5 }}>
                                     <Stack spacing={2} alignItems="center" textAlign="center">
-                                        <Box sx={{ width: 60, height: 60, borderRadius: 2, display: 'flex', alignItems: 'center', justifyContent: 'center', background: `linear-gradient(135deg, ${item.color} 0%, ${alpha(item.color, 0.6)} 100%)`, color: '#fff', boxShadow: `0 4px 12px ${alpha(item.color, 0.4)}` }}>
-                                            {item.icon}
+                                        <Box sx={{ width: 70, height: 70, borderRadius: 3, display: 'flex', alignItems: 'center', justifyContent: 'center', background: `linear-gradient(135deg, ${item.color} 0%, ${alpha(item.color, 0.6)} 100%)`, color: '#fff', boxShadow: `0 8px 24px ${alpha(item.color, 0.5)}`, position: 'relative', overflow: 'hidden', '&::before': { content: '""', position: 'absolute', top: '-50%', left: '-50%', width: '200%', height: '200%', background: `radial-gradient(circle, ${alpha('#fff', 0.2)} 0%, transparent 70%)`, animation: 'float 6s ease-in-out infinite' } }}>
+                                            <Box sx={{ position: 'relative', zIndex: 1 }}>{item.icon}</Box>
                                         </Box>
                                         <Box>
                                             <Typography variant="h6" sx={{ fontWeight: 700, color: '#e0e0e0', mb: 0.5 }}>{item.title}</Typography>
@@ -81,11 +139,11 @@ function About() {
                 <Box pb={3} py={3} mx={1}>
                     <Grid container spacing={3} justifyContent="center" sx={{ flex: 1, }}>
                         <Grid item xs={12}>
-                            <Paper sx={{ p: 2.5, background: 'linear-gradient(135deg, rgba(118, 75, 162, 0.05) 0%, rgba(217, 70, 239, 0.05) 100%)', border: '1px solid rgba(118, 75, 162, 0.2)', borderRadius: 3 }}>
-                                <Typography variant="h6" sx={{ fontWeight: 700, color: '#e0e0e0', mb: 2 }}>Key Skills</Typography>
+                            <Paper sx={{ p: 3.5, background: 'linear-gradient(135deg, rgba(118, 75, 162, 0.08) 0%, rgba(217, 70, 239, 0.08) 100%)', backdropFilter: 'blur(20px)', border: '2px solid rgba(118, 75, 162, 0.25)', borderRadius: 4, boxShadow: '0 8px 32px rgba(118, 75, 162, 0.15)' }}>
+                                <Typography variant="h6" sx={{ fontWeight: 800, color: '#f0f0f0', mb: 3, fontSize: '1.25rem' }}>Key Skills</Typography>
                                 <Stack direction="row" spacing={1} sx={{ flexWrap: 'wrap', gap: 1 }}>
                                     {skills.map((skill) => (
-                                        <Chip key={skill} label={skill} icon={<CheckCircleIcon />} size="small" sx={{ backgroundColor: alpha('#764ba2', 0.15), color: '#b0b0b0', fontWeight: 600, border: '1px solid rgba(118, 75, 162, 0.3)', '&:hover': { backgroundColor: alpha('#764ba2', 0.25), color: '#764ba2' } }} />
+                                        <Chip key={skill} label={skill} icon={<CheckCircleIcon />} size="medium" sx={{ backgroundColor: alpha('#764ba2', 0.2), color: '#d0d0d0', fontWeight: 600, fontSize: '0.9rem', py: 2.5, border: '2px solid rgba(118, 75, 162, 0.3)', boxShadow: '0 4px 15px rgba(118, 75, 162, 0.2)', transition: 'all 0.3s ease', '&:hover': { backgroundColor: alpha('#764ba2', 0.35), color: '#764ba2', transform: 'translateY(-3px)', boxShadow: '0 6px 20px rgba(118, 75, 162, 0.4)' } }} />
                                     ))}
                                 </Stack>
                             </Paper>
@@ -99,10 +157,12 @@ function About() {
                         <Grid item xs={12} md={8}>
                             <Paper
                                 sx={{
-                                    p: 4,
-                                    background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(217, 70, 239, 0.05) 100%)',
-                                    border: '1px solid rgba(102, 126, 234, 0.2)',
-                                    borderRadius: 3,
+                                    p: 4.5,
+                                    background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(217, 70, 239, 0.08) 100%)',
+                                    backdropFilter: 'blur(20px)',
+                                    border: '2px solid rgba(102, 126, 234, 0.25)',
+                                    borderRadius: 4,
+                                    boxShadow: '0 8px 32px rgba(102, 126, 234, 0.15)',
                                     height: '100%',
                                 }}
                             >
@@ -182,10 +242,12 @@ function About() {
                         <Grid item xs={12} md={4}>
                             <Paper
                                 sx={{
-                                    p: 4,
-                                    background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.05) 100%)',
-                                    border: '1px solid rgba(16, 185, 129, 0.3)',
-                                    borderRadius: 3,
+                                    p: 4.5,
+                                    background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(5, 150, 105, 0.08) 100%)',
+                                    backdropFilter: 'blur(20px)',
+                                    border: '2px solid rgba(16, 185, 129, 0.35)',
+                                    borderRadius: 4,
+                                    boxShadow: '0 8px 32px rgba(16, 185, 129, 0.2)',
                                     height: '100%',
                                     display: 'flex',
                                     flexDirection: 'column',
