@@ -21,7 +21,7 @@ export const getWebProjects = (t) => [
     status: 'completed',
     projectType: 'personal',
     company: null,
-    githubLink: null,
+    githubLink: 'https://github.com/maniadiaz/cv-generator.git',
     description: t('projects.list.cvGeneratorFrontend.description'),
     responsibilities: t('projects.list.cvGeneratorFrontend.responsibilities', { returnObjects: true }),
     technologies: ['React', 'TypeScript', 'Redux Toolkit', 'Material-UI', 'Vite', 'react-i18next', 'PWA', 'Axios', 'React Router'],
