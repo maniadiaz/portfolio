@@ -31,6 +31,8 @@
   "projects": {
     "title": "Mis Proyectos",
     "subtitle": "Una colección de proyectos que demuestran mis habilidades de desarrollo full-stack, desde infraestructura backend hasta interfaces frontend modernas",
+    "personalProjects": "Proyectos Personales",
+    "companyProjects": "Proyectos Empresariales",
     "webProjects": "Proyectos Web",
     "pythonProjects": "Proyectos Python",
     "completed": "COMPLETADO",
@@ -269,6 +271,26 @@
           "Integración completa con backend API RESTful",
           "Validación de formularios y manejo de errores",
           "Diseño responsive optimizado para todos los dispositivos"
+        ]
+      },
+      "mediaHunter": {
+        "title": "MediaHunter",
+        "subtitle": "Buscador y Descargador de Contenido Multimedia",
+        "period": "Febrero 2026",
+        "description": "Aplicación web completa para buscar y descargar contenido multimedia gratuito (imágenes, videos, audio, GIFs) desde múltiples fuentes. Arquitectura full-stack con React + Vite en frontend y Express + TypeScript en backend. Integra 4 APIs gratuitas: Pexels, Pixabay, Giphy y Freesound.",
+        "responsibilities": [
+          "Desarrollo frontend con React 18, Vite y Material UI v7.3.7",
+          "Desarrollo backend con Express y TypeScript",
+          "Integración de múltiples APIs: Pexels, Pixabay, Giphy, Freesound",
+          "Sistema de búsqueda unificada en múltiples fuentes",
+          "Implementación de filtros por tipo, orientación y ordenamiento",
+          "Vista previa inline con reproductor de video/audio y lightbox",
+          "Sistema de descarga directa con múltiples calidades",
+          "Funcionalidad de favoritos con localStorage",
+          "Historial de búsqueda persistente",
+          "Implementación de modo oscuro/claro",
+          "Internacionalización bilingüe (Español/English) con i18next",
+          "Diseño responsive mobile-first"
         ]
       },
       "cvGeneratorBackend": {

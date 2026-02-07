@@ -30,7 +30,9 @@
   },
   "projects": {
     "title": "My Projects",
-    "subtitle": "A collection of projects showcasing my full-stack development skills, from backend infrastructure to modern frontend interfaces",
+    "subtitle": "A collection of projects demonstrating my full-stack development skills, from backend infrastructure to modern frontend interfaces",
+    "personalProjects": "Personal Projects",
+    "companyProjects": "Company Projects",
     "webProjects": "Web Projects",
     "pythonProjects": "Python Projects",
     "completed": "COMPLETED",
@@ -269,6 +271,26 @@
           "Complete integration with RESTful backend API",
           "Form validation and error handling",
           "Responsive design optimized for all devices"
+        ]
+      },
+      "mediaHunter": {
+        "title": "MediaHunter",
+        "subtitle": "Multimedia Content Search and Download",
+        "period": "February 2026",
+        "description": "Complete web application for searching and downloading free multimedia content (images, videos, audio, GIFs) from multiple sources. Full-stack architecture with React + Vite on frontend and Express + TypeScript on backend. Integrates 4 free APIs: Pexels, Pixabay, Giphy, and Freesound.",
+        "responsibilities": [
+          "Frontend development with React 18, Vite, and Material UI v7.3.7",
+          "Backend development with Express and TypeScript",
+          "Integration of multiple APIs: Pexels, Pixabay, Giphy, Freesound",
+          "Unified search system across multiple sources",
+          "Implementation of filters by type, orientation, and sorting",
+          "Inline preview with video/audio player and lightbox",
+          "Direct download system with multiple quality options",
+          "Favorites functionality with localStorage",
+          "Persistent search history",
+          "Dark/light mode implementation",
+          "Bilingual internationalization (Spanish/English) with i18next",
+          "Mobile-first responsive design"
         ]
       },
       "cvGeneratorBackend": {

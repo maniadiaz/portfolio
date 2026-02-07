@@ -27,8 +27,31 @@ function Projects() {
   const webStats = getWebStats(t)
   const pythonStats = getPythonStats(t)
 
-  const currentProjects = selectedTab === 0 ? webProjects : pythonProjects
-  const currentStats = selectedTab === 0 ? webStats : pythonStats
+  // Separar proyectos web por tipo
+  const personalProjects = webProjects.filter(p => p.projectType === 'personal')
+  const companyProjects = webProjects.filter(p => p.projectType === 'company' || p.projectType === 'freelance')
+
+  // Determinar proyectos y stats actuales según la pestaña
+  const getCurrentProjects = () => {
+    switch(selectedTab) {
+      case 0: return personalProjects
+      case 1: return companyProjects
+      case 2: return pythonProjects
+      default: return personalProjects
+    }
+  }
+
+  const getCurrentStats = () => {
+    switch(selectedTab) {
+      case 0: return webStats
+      case 1: return webStats
+      case 2: return pythonStats
+      default: return webStats
+    }
+  }
+
+  const currentProjects = getCurrentProjects()
+  const currentStats = getCurrentStats()
 
   const getProjectTypeLabel = (type) => {
     switch (type) {
@@ -185,28 +208,53 @@ function Projects() {
                 }}
               >
                 <Tab
-                  icon={<LanguageIcon />}
+                  icon={<PersonIcon />}
                   iconPosition="start"
-                  label={t('projects.webProjects')}
+                  label={t('projects.personalProjects')}
                   sx={{
                     color: '#909090',
                     fontWeight: 600,
-                    fontSize: '1rem',
-                    textTransform: 'none',
-                    borderRadius: 3,
-                    px: 4,
+                    fontSize: '0.95rem',
                     py: 1.5,
+                    px: 3,
                     minHeight: 'auto',
+                    borderRadius: 3,
+                    textTransform: 'none',
                     transition: 'all 0.3s ease',
+                    '&:hover': {
+                      color: '#10b981',
+                      background: 'rgba(16, 185, 129, 0.1)',
+                    },
                     '&.Mui-selected': {
                       color: '#fff',
-                      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                      boxShadow: '0 4px 15px rgba(102, 126, 234, 0.4)',
-                    },
+                      background: 'linear-gradient(135deg, #10b981 0%, rgba(16, 185, 129, 0.7) 100%)',
+                      boxShadow: '0 4px 15px rgba(16, 185, 129, 0.4)',
+                    }
+                  }}
+                />
+                <Tab
+                  icon={<BusinessIcon />}
+                  iconPosition="start"
+                  label={t('projects.companyProjects')}
+                  sx={{
+                    color: '#909090',
+                    fontWeight: 600,
+                    fontSize: '0.95rem',
+                    py: 1.5,
+                    px: 3,
+                    minHeight: 'auto',
+                    borderRadius: 3,
+                    textTransform: 'none',
+                    transition: 'all 0.3s ease',
                     '&:hover': {
-                      color: '#b0b0b0',
+                      color: '#667eea',
                       background: 'rgba(102, 126, 234, 0.1)',
                     },
+                    '&.Mui-selected': {
+                      color: '#fff',
+                      background: 'linear-gradient(135deg, #667eea 0%, rgba(102, 126, 234, 0.7) 100%)',
+                      boxShadow: '0 4px 15px rgba(102, 126, 234, 0.4)',
+                    }
                   }}
                 />
                 <Tab
@@ -216,22 +264,22 @@ function Projects() {
                   sx={{
                     color: '#909090',
                     fontWeight: 600,
-                    fontSize: '1rem',
-                    textTransform: 'none',
-                    borderRadius: 3,
-                    px: 4,
+                    fontSize: '0.95rem',
                     py: 1.5,
+                    px: 3,
                     minHeight: 'auto',
+                    borderRadius: 3,
+                    textTransform: 'none',
                     transition: 'all 0.3s ease',
-                    '&.Mui-selected': {
-                      color: '#fff',
-                      background: 'linear-gradient(135deg, #8b5cf6 0%, #d946ef 100%)',
-                      boxShadow: '0 4px 15px rgba(139, 92, 246, 0.4)',
-                    },
                     '&:hover': {
-                      color: '#b0b0b0',
+                      color: '#8b5cf6',
                       background: 'rgba(139, 92, 246, 0.1)',
                     },
+                    '&.Mui-selected': {
+                      color: '#fff',
+                      background: 'linear-gradient(135deg, #8b5cf6 0%, rgba(139, 92, 246, 0.7) 100%)',
+                      boxShadow: '0 4px 15px rgba(139, 92, 246, 0.4)',
+                    }
                   }}
                 />
               </Tabs>
@@ -241,6 +289,7 @@ function Projects() {
 
       {/* Projects Grid */}
       <motion.div
+        key={selectedTab}
         variants={containerVariants}
         initial="hidden"
         animate="visible"
