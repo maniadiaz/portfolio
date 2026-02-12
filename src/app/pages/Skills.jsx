@@ -10,8 +10,10 @@ import ApiIcon from '@mui/icons-material/Api'
 import TerminalIcon from '@mui/icons-material/Terminal'
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTranslation } from 'react-i18next'
 
 function Skills() {
+  const { t } = useTranslation()
   const [selectedTab, setSelectedTab] = useState(0);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
@@ -23,58 +25,58 @@ function Skills() {
   const skillCategories = [
     {
       id: 0,
-      name: 'Frontend',
+      name: t('skills.categories.frontend'),
       icon: <WebIcon />,
       color: '#667eea',
       skills: [
-        { name: 'React', level: 85, experience: '8 months', icon: '⚛️' },
-        { name: 'Angular', level: 75, experience: '2 months', icon: '🅰️' },
-        { name: 'JavaScript', level: 90, experience: '18+ months', icon: '📜' },
-        { name: 'TypeScript', level: 80, experience: '6 months', icon: '💎' },
-        { name: 'HTML5', level: 95, experience: '18+ months', icon: '🌐' },
-        { name: 'CSS3', level: 90, experience: '18+ months', icon: '🎨' },
+        { name: 'React', level: 85, experience: '18 months', icon: '⚛️' },
+        { name: 'Angular', level: 75, experience: '6 months', icon: '🅰️' },
+        { name: 'JavaScript', level: 90, experience: '18 months', icon: '📜' },
+        { name: 'TypeScript', level: 80, experience: '12 months', icon: '💎' },
+        { name: 'HTML5', level: 95, experience: '18 months', icon: '🌐' },
+        { name: 'CSS3', level: 90, experience: '18 months', icon: '🎨' },
         { name: 'Vite', level: 85, experience: '8 months', icon: '⚡' },
-        { name: 'Ionic', level: 75, experience: '2 months', icon: '📱' },
-        { name: 'Material UI', level: 80, experience: '7 months', icon: '🎭' },
+        { name: 'Ionic', level: 75, experience: '6 months', icon: '📱' },
+        { name: 'Material UI', level: 80, experience: '18 months', icon: '🎭' },
       ]
     },
     {
       id: 1,
-      name: 'Backend',
+      name: t('skills.categories.backend'),
       icon: <ApiIcon />,
       color: '#764ba2',
       skills: [
-        { name: 'Node.js', level: 80, experience: '8 months', icon: '🟢' },
-        { name: 'Express', level: 85, experience: '8 months', icon: '🚂' },
-        { name: 'PHP', level: 85, experience: '8 months', icon: '🐘' },
-        { name: 'C#', level: 70, experience: '3 months', icon: '#️⃣' },
-        { name: '.NET', level: 70, experience: '3 months', icon: '🔷' },
-        { name: 'Sequelize', level: 80, experience: '6 months', icon: '🔗' },
+        { name: 'Node.js', level: 80, experience: '18 months', icon: '🟢' },
+        { name: 'Express', level: 85, experience: '18 months', icon: '🚂' },
+        { name: 'PHP', level: 85, experience: '12 months', icon: '🐘' },
+        { name: 'C#', level: 70, experience: '6 months', icon: '#️⃣' },
+        { name: '.NET', level: 70, experience: '6 months', icon: '🔷' },
+        { name: 'Sequelize', level: 80, experience: '18 months', icon: '🔗' },
       ]
     },
     {
       id: 2,
-      name: 'Database',
+      name: t('skills.categories.database'),
       icon: <StorageIcon />,
       color: '#d946ef',
       skills: [
         { name: 'MySQL', level: 90, experience: '18+ months', icon: '🐬' },
         { name: 'MariaDB', level: 85, experience: '12 months', icon: '🦭' },
-        { name: 'Supabase', level: 75, experience: '2 months', icon: '⚡' },
+        { name: 'Supabase', level: 75, experience: '6 months', icon: '⚡' },
         { name: 'SQLite', level: 80, experience: '8 months', icon: '📦' },
         { name: 'SQL', level: 90, experience: '18+ months', icon: '📊' },
       ]
     },
     {
       id: 3,
-      name: 'DevOps & Tools',
+      name: t('skills.categories.devops'),
       icon: <CloudIcon />,
       color: '#10b981',
       skills: [
         { name: 'Git', level: 85, experience: '18+ months', icon: '🔀' },
-        { name: 'VPS Management', level: 75, experience: '3 months', icon: '☁️' },
-        { name: 'Nginx', level: 70, experience: '3 months', icon: '🌐' },
-        { name: 'Bind9 (DNS)', level: 65, experience: '2 months', icon: '🔗' },
+        { name: 'VPS Management', level: 75, experience: '12 months', icon: '☁️' },
+        { name: 'Nginx', level: 70, experience: '12 months', icon: '🌐' },
+        { name: 'Bind9 (DNS)', level: 65, experience: '12 months', icon: '🔗' },
       ]
     }
   ]
@@ -93,25 +95,25 @@ function Skills() {
       IconComponent: CodeIcon,
       color: '#667eea',
       value: '20+',
-      label: 'Technologies',
+      label: t('skills.summaryStats.technologies'),
     },
     {
       IconComponent: TerminalIcon,
       color: '#764ba2',
       value: '4',
-      label: 'Categories',
+      label: t('skills.summaryStats.categories'),
     },
     {
       IconComponent: BuildIcon,
       color: '#d946ef',
       value: '18+',
-      label: 'Months Experience',
+      label: t('skills.summaryStats.monthsExperience'),
     },
     {
       IconComponent: DevicesIcon,
       color: '#10b981',
       value: 'Full',
-      label: 'Stack Developer',
+      label: t('skills.summaryStats.stackDeveloper'),
     },
   ];
 
@@ -131,7 +133,7 @@ function Skills() {
             WebkitTextFillColor: 'transparent',
           }}
         >
-          Technical Skills
+          {t('skills.title')}
         </Typography>
         <Typography
           variant="h6"
@@ -142,7 +144,7 @@ function Skills() {
             lineHeight: 1.6,
           }}
         >
-          A comprehensive overview of my technical expertise across different domains of full-stack development
+          {t('skills.subtitle')}
         </Typography>
       </Box>
 
@@ -222,7 +224,7 @@ function Skills() {
               color: '#e0e0e0',
             }}
           >
-            {currentCategory.name} Development
+            {currentCategory.name} {t('skills.development')}
           </Typography>
         </Stack>
 
@@ -314,7 +316,7 @@ function Skills() {
               color: '#e0e0e0',
             }}
           >
-            Architecture & Concepts
+            {t('skills.architectureTitle')}
           </Typography>
           <Typography
             variant="body1"
@@ -324,7 +326,7 @@ function Skills() {
               mx: 'auto',
             }}
           >
-            Additional expertise in modern development patterns and methodologies
+            {t('skills.architectureSubtitle')}
           </Typography>
         </Box>
 

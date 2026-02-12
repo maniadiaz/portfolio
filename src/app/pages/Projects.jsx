@@ -163,7 +163,7 @@ function Projects() {
                   fontSize: '0.9rem',
                 }}
               >
-                Portfolio
+                {t('projects.badge')}
               </Typography>
             </Box>
             <Typography

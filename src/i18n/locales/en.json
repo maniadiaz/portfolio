@@ -31,6 +31,7 @@
   "projects": {
     "title": "My Projects",
     "subtitle": "A collection of projects demonstrating my full-stack development skills, from backend infrastructure to modern frontend interfaces",
+    "badge": "Portfolio",
     "personalProjects": "Personal Projects",
     "companyProjects": "Company Projects",
     "webProjects": "Web Projects",
@@ -318,12 +319,22 @@
     }
   },
   "skills": {
-    "title": "My Skills",
-    "subtitle": "A comprehensive overview of my tech stack and expertise",
+    "title": "Technical Skills",
+    "subtitle": "A comprehensive overview of my technical expertise across different domains of full-stack development",
+    "development": "Development",
+    "architectureTitle": "Architecture & Concepts",
+    "architectureSubtitle": "Additional expertise in modern development patterns and methodologies",
+    "summaryStats": {
+      "technologies": "Technologies",
+      "categories": "Categories",
+      "monthsExperience": "Months Experience",
+      "stackDeveloper": "Stack Developer"
+    },
     "categories": {
       "frontend": "Frontend",
       "backend": "Backend",
       "database": "Database",
+      "devops": "DevOps & Tools",
       "mobile": "Mobile",
       "tools": "Tools"
     },
@@ -362,7 +373,24 @@
   "about": {
     "title": "About Me",
     "subtitle": "Learn more about my journey and experience",
+    "badge": "Professional Profile",
+    "heading": "About Me",
+    "description": "View my professional information",
     "downloadCV": "Download CV",
+    "highlights": {
+      "fullstack": "Full Stack Developer",
+      "fullstackDesc": "Frontend & Backend expertise",
+      "degree": "B.S. in Information Systems",
+      "degreeDesc": "Engineering degree",
+      "technologies": "20+ Technologies",
+      "technologiesDesc": "Mastered and growing"
+    },
+    "keySkills": "Key Skills",
+    "connectTitle": "Connect with me",
+    "connectDescription": "Follow me on social media to stay updated with my latest projects and professional journey",
+    "availableTitle": "Available for Work",
+    "availableDescription": "Open to freelance projects and full-time opportunities",
+    "availableTagline": "Let's build something amazing together!",
     "education": {
       "title": "Education",
       "university": "Universidad Autónoma de Sinaloa",

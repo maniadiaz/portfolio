@@ -31,6 +31,7 @@
   "projects": {
     "title": "Mis Proyectos",
     "subtitle": "Una colección de proyectos que demuestran mis habilidades de desarrollo full-stack, desde infraestructura backend hasta interfaces frontend modernas",
+    "badge": "Portafolio",
     "personalProjects": "Proyectos Personales",
     "companyProjects": "Proyectos Empresariales",
     "webProjects": "Proyectos Web",
@@ -318,12 +319,22 @@
     }
   },
   "skills": {
-    "title": "Mis Habilidades",
-    "subtitle": "Una visión completa de mi stack tecnológico y experiencia",
+    "title": "Habilidades Técnicas",
+    "subtitle": "Una visión completa de mi experiencia técnica en diferentes dominios del desarrollo full-stack",
+    "development": "Desarrollo",
+    "architectureTitle": "Arquitectura y Conceptos",
+    "architectureSubtitle": "Experiencia adicional en patrones y metodologías de desarrollo moderno",
+    "summaryStats": {
+      "technologies": "Tecnologías",
+      "categories": "Categorías",
+      "monthsExperience": "Meses de Experiencia",
+      "stackDeveloper": "Stack Developer"
+    },
     "categories": {
       "frontend": "Frontend",
       "backend": "Backend",
       "database": "Base de Datos",
+      "devops": "DevOps y Herramientas",
       "mobile": "Móvil",
       "tools": "Herramientas"
     },
@@ -362,7 +373,24 @@
   "about": {
     "title": "Sobre Mí",
     "subtitle": "Conoce más sobre mi trayectoria y experiencia",
+    "badge": "Perfil Profesional",
+    "heading": "Sobre Mí",
+    "description": "Consulta mi información profesional",
     "downloadCV": "Descargar CV",
+    "highlights": {
+      "fullstack": "Desarrollador Full Stack",
+      "fullstackDesc": "Experiencia en Frontend y Backend",
+      "degree": "Lic. en Sistemas de Información",
+      "degreeDesc": "Título de Ingeniería",
+      "technologies": "20+ Tecnologías",
+      "technologiesDesc": "Dominadas y en crecimiento"
+    },
+    "keySkills": "Habilidades Clave",
+    "connectTitle": "Conéctate conmigo",
+    "connectDescription": "Sígueme en redes sociales para estar al tanto de mis últimos proyectos y trayectoria profesional",
+    "availableTitle": "Disponible para Trabajar",
+    "availableDescription": "Abierto a proyectos freelance y oportunidades de tiempo completo",
+    "availableTagline": "¡Construyamos algo increíble juntos!",
     "education": {
       "title": "Formación",
       "university": "Universidad Autónoma de Sinaloa",

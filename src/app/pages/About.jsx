@@ -8,13 +8,15 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
+import { useTranslation } from 'react-i18next';
 
 function About() {
+    const { t } = useTranslation();
 
     const highlights = [
-        { icon: <WorkIcon sx={{ fontSize: 40 }} />, title: 'Full Stack Developer', description: 'Frontend & Backend expertise', color: '#667eea' },
-        { icon: <SchoolIcon sx={{ fontSize: 40 }} />, title: 'B.S. in Information Systems', description: 'Engineering degree', color: '#764ba2' },
-        { icon: <CodeIcon sx={{ fontSize: 40 }} />, title: '20+ Technologies', description: 'Mastered and growing', color: '#d946ef' }
+        { icon: <WorkIcon sx={{ fontSize: 40 }} />, title: t('about.highlights.fullstack'), description: t('about.highlights.fullstackDesc'), color: '#667eea' },
+        { icon: <SchoolIcon sx={{ fontSize: 40 }} />, title: t('about.highlights.degree'), description: t('about.highlights.degreeDesc'), color: '#764ba2' },
+        { icon: <CodeIcon sx={{ fontSize: 40 }} />, title: t('about.highlights.technologies'), description: t('about.highlights.technologiesDesc'), color: '#d946ef' }
     ];
 
     const skills = ['React', 'Angular', 'JavaScript', 'TypeScript', 'Node.js', 'Express', 'PHP', 'C#', '.NET', 'MySQL', 'Supabase', 'Ionic', 'Git', 'REST API', 'MVC'];
@@ -103,17 +105,17 @@ function About() {
                                 fontSize: '0.9rem',
                             }}
                         >
-                            Professional Profile
+                            {t('about.badge')}
                         </Typography>
                     </Box>
                     <Stack direction="row" spacing={2} justifyContent="center" alignItems="center" sx={{ mb: 2 }}>
                         <DescriptionIcon sx={{ fontSize: 60, background: 'linear-gradient(135deg, #667eea 0%, #d946ef 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }} />
                         <Typography variant="h2" sx={{ fontWeight: 900, fontSize: { xs: '2.5rem', md: '3.5rem' }, background: 'linear-gradient(135deg, #667eea 0%, #8b5cf6 50%, #d946ef 100%)', backgroundSize: '200% 200%', animation: 'gradientShift 5s ease infinite', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', letterSpacing: -1 }}>
-                            About Me
+                            {t('about.heading')}
                         </Typography>
                     </Stack>
                     <Typography variant="h6" sx={{ color: '#a0a0a0', mb: 3, fontSize: { xs: '1rem', md: '1.15rem' } }}>
-                        View my professional information
+                        {t('about.description')}
                     </Typography>
                 </Box>
 
@@ -140,7 +142,7 @@ function About() {
                     <Grid container spacing={3} justifyContent="center" sx={{ flex: 1, }}>
                         <Grid size={12}>
                             <Paper sx={{ p: 3.5, background: 'linear-gradient(135deg, rgba(118, 75, 162, 0.08) 0%, rgba(217, 70, 239, 0.08) 100%)', backdropFilter: 'blur(20px)', border: '2px solid rgba(118, 75, 162, 0.25)', borderRadius: 4, boxShadow: '0 8px 32px rgba(118, 75, 162, 0.15)' }}>
-                                <Typography variant="h6" sx={{ fontWeight: 800, color: '#f0f0f0', mb: 3, fontSize: '1.25rem' }}>Key Skills</Typography>
+                                <Typography variant="h6" sx={{ fontWeight: 800, color: '#f0f0f0', mb: 3, fontSize: '1.25rem' }}>{t('about.keySkills')}</Typography>
                                 <Stack direction="row" spacing={1} sx={{ flexWrap: 'wrap', gap: 1 }}>
                                     {skills.map((skill) => (
                                         <Chip key={skill} label={skill} icon={<CheckCircleIcon />} size="medium" sx={{ backgroundColor: alpha('#764ba2', 0.2), color: '#d0d0d0', fontWeight: 600, fontSize: '0.9rem', py: 2.5, border: '2px solid rgba(118, 75, 162, 0.3)', boxShadow: '0 4px 15px rgba(118, 75, 162, 0.2)', transition: 'all 0.3s ease', '&:hover': { backgroundColor: alpha('#764ba2', 0.35), color: '#764ba2', transform: 'translateY(-3px)', boxShadow: '0 6px 20px rgba(118, 75, 162, 0.4)' } }} />
@@ -188,7 +190,7 @@ function About() {
                                             color: '#e0e0e0',
                                         }}
                                     >
-                                        Connect with me
+                                        {t('about.connectTitle')}
                                     </Typography>
                                 </Stack>
 
@@ -199,7 +201,7 @@ function About() {
                                         mb: 3,
                                     }}
                                 >
-                                    Follow me on social media to stay updated with my latest projects and professional journey
+                                    {t('about.connectDescription')}
                                 </Typography>
 
                                 <Stack
@@ -307,7 +309,7 @@ function About() {
                                         mb: 2,
                                     }}
                                 >
-                                    Available for Work
+                                    {t('about.availableTitle')}
                                 </Typography>
                                 <Typography
                                     variant="body1"
@@ -316,7 +318,7 @@ function About() {
                                         mb: 1,
                                     }}
                                 >
-                                    Open to freelance projects and full-time opportunities
+                                    {t('about.availableDescription')}
                                 </Typography>
                                 <Typography
                                     variant="body2"
@@ -325,7 +327,7 @@ function About() {
                                         fontStyle: 'italic',
                                     }}
                                 >
-                                    Let's build something amazing together!
+                                    {t('about.availableTagline')}
                                 </Typography>
                             </Paper>
                         </Grid>
