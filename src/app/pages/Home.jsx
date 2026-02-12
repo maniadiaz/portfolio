@@ -168,14 +168,14 @@ function Home() {
                 variant="h1"
                 sx={{
                   fontWeight: 900,
-                  mb: 2,
+                  mb: 1,
                   fontSize: { xs: '3rem', md: '5rem', lg: '6rem' },
                   background: 'linear-gradient(135deg, #667eea 0%, #8b5cf6 50%, #d946ef 100%)',
                   backgroundSize: '200% 200%',
                   animation: 'gradientShift 5s ease infinite',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
-                  lineHeight: 1.1,
+                  lineHeight: 1.2,
                   textShadow: '0 0 80px rgba(102, 126, 234, 0.5)',
                   letterSpacing: -2,
                 }}
