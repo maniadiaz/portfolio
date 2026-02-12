@@ -228,7 +228,7 @@ function Skills() {
 
         <Grid container spacing={3}>
           {currentCategory.skills.map((skill, index) => (
-            <Grid item xs={12} sm={6} key={skill.name}>
+            <Grid size={{ xs: 12, sm: 6 }} key={skill.name}>
               <Card
                 sx={{
                   background: `linear-gradient(135deg, ${alpha(currentCategory.color, 0.05)} 0%, ${alpha(currentCategory.color, 0.02)} 100%)`,
@@ -330,7 +330,7 @@ function Skills() {
 
         <Grid container spacing={2} justifyContent="center">
           {architectureSkills.map((skill) => (
-            <Grid item xs={6} sm={4} md={2} key={skill.name}>
+            <Grid size={{ xs: 6, sm: 4, md: 2 }} key={skill.name}>
               <Tooltip title={skill.name} arrow>
                 <Paper
                   sx={{
@@ -384,7 +384,7 @@ function Skills() {
                 const Icon = stat.IconComponent;
 
                 return (
-                  <Grid item xs={12} sm={6} md={3} key={stat.label}>
+                  <Grid size={{ xs: 12, sm: 6, md: 3 }} key={stat.label}>
                     <Box sx={{ textAlign: 'center' }}>
                       <Icon sx={{ fontSize: 50, color: stat.color, mb: 1 }} />
                       <Typography variant="h3" sx={{ fontWeight: 800, color: stat.color }}>

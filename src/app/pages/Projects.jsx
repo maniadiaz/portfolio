@@ -1,7 +1,7 @@
-import { useState } from 'react'
-import { Box, Container, Typography, Card, CardContent, Chip, Stack, Grid, Divider, alpha, Button, Tabs, Tab } from '@mui/material'
+import { useState, useRef } from 'react'
+import { Box, Container, Typography, Card, CardContent, Chip, Stack, Grid, Divider, alpha, Button, IconButton } from '@mui/material'
 import { useTranslation } from 'react-i18next'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday'
 import CodeIcon from '@mui/icons-material/Code'
 import WorkIcon from '@mui/icons-material/Work'
@@ -10,17 +10,14 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import BusinessIcon from '@mui/icons-material/Business'
 import PersonIcon from '@mui/icons-material/Person'
-import LanguageIcon from '@mui/icons-material/Language'
 import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions'
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
+import ChevronRightIcon from '@mui/icons-material/ChevronRight'
 import { getWebProjects, getPythonProjects, getWebStats, getPythonStats } from '../data/projectsData'
 
 function Projects() {
   const { t } = useTranslation()
   const [selectedTab, setSelectedTab] = useState(0)
-
-  const handleTabChange = (_event, newValue) => {
-    setSelectedTab(newValue)
-  }
 
   const webProjects = getWebProjects(t)
   const pythonProjects = getPythonProjects(t)
@@ -30,6 +27,20 @@ function Projects() {
   // Separar proyectos web por tipo
   const personalProjects = webProjects.filter(p => p.projectType === 'personal')
   const companyProjects = webProjects.filter(p => p.projectType === 'company' || p.projectType === 'freelance')
+  const scrollRef = useRef(null)
+
+  const filterTabs = [
+    { label: t('projects.personalProjects'), icon: <PersonIcon />, color: '#10b981' },
+    { label: t('projects.companyProjects'), icon: <BusinessIcon />, color: '#667eea' },
+    { label: t('projects.pythonProjects'), icon: <IntegrationInstructionsIcon />, color: '#8b5cf6' },
+  ]
+
+  const handleScrollLeft = () => {
+    if (scrollRef.current) scrollRef.current.scrollBy({ left: -150, behavior: 'smooth' })
+  }
+  const handleScrollRight = () => {
+    if (scrollRef.current) scrollRef.current.scrollBy({ left: 150, behavior: 'smooth' })
+  }
 
   // Determinar proyectos y stats actuales según la pestaña
   const getCurrentProjects = () => {
@@ -185,104 +196,104 @@ function Projects() {
               {t('projects.subtitle')}
             </Typography>
 
-            {/* Tabs */}
+            {/* Filter Tabs with scroll */}
             <Box
               sx={{
-                display: 'inline-flex',
-                p: 0.5,
-                borderRadius: 4,
-                background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(139, 92, 246, 0.08) 100%)',
-                backdropFilter: 'blur(20px)',
-                border: '1px solid rgba(102, 126, 234, 0.2)',
-                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: 1,
+                width: '100%',
+                maxWidth: '100%',
               }}
             >
-              <Tabs
-                value={selectedTab}
-                onChange={handleTabChange}
+              {/* Left arrow - only on mobile */}
+              <IconButton
+                onClick={handleScrollLeft}
                 sx={{
-                  minHeight: 'auto',
-                  '& .MuiTabs-indicator': {
-                    display: 'none',
-                  },
+                  display: { xs: 'flex', md: 'none' },
+                  color: '#909090',
+                  flexShrink: 0,
+                  background: 'rgba(102, 126, 234, 0.1)',
+                  border: '1px solid rgba(102, 126, 234, 0.2)',
+                  width: 36,
+                  height: 36,
+                  '&:hover': { background: 'rgba(102, 126, 234, 0.2)' },
                 }}
               >
-                <Tab
-                  icon={<PersonIcon />}
-                  iconPosition="start"
-                  label={t('projects.personalProjects')}
-                  sx={{
-                    color: '#909090',
-                    fontWeight: 600,
-                    fontSize: '0.95rem',
-                    py: 1.5,
-                    px: 3,
-                    minHeight: 'auto',
-                    borderRadius: 3,
-                    textTransform: 'none',
-                    transition: 'all 0.3s ease',
-                    '&:hover': {
-                      color: '#10b981',
-                      background: 'rgba(16, 185, 129, 0.1)',
-                    },
-                    '&.Mui-selected': {
-                      color: '#fff',
-                      background: 'linear-gradient(135deg, #10b981 0%, rgba(16, 185, 129, 0.7) 100%)',
-                      boxShadow: '0 4px 15px rgba(16, 185, 129, 0.4)',
-                    }
-                  }}
-                />
-                <Tab
-                  icon={<BusinessIcon />}
-                  iconPosition="start"
-                  label={t('projects.companyProjects')}
-                  sx={{
-                    color: '#909090',
-                    fontWeight: 600,
-                    fontSize: '0.95rem',
-                    py: 1.5,
-                    px: 3,
-                    minHeight: 'auto',
-                    borderRadius: 3,
-                    textTransform: 'none',
-                    transition: 'all 0.3s ease',
-                    '&:hover': {
-                      color: '#667eea',
-                      background: 'rgba(102, 126, 234, 0.1)',
-                    },
-                    '&.Mui-selected': {
-                      color: '#fff',
-                      background: 'linear-gradient(135deg, #667eea 0%, rgba(102, 126, 234, 0.7) 100%)',
-                      boxShadow: '0 4px 15px rgba(102, 126, 234, 0.4)',
-                    }
-                  }}
-                />
-                <Tab
-                  icon={<IntegrationInstructionsIcon />}
-                  iconPosition="start"
-                  label={t('projects.pythonProjects')}
-                  sx={{
-                    color: '#909090',
-                    fontWeight: 600,
-                    fontSize: '0.95rem',
-                    py: 1.5,
-                    px: 3,
-                    minHeight: 'auto',
-                    borderRadius: 3,
-                    textTransform: 'none',
-                    transition: 'all 0.3s ease',
-                    '&:hover': {
-                      color: '#8b5cf6',
-                      background: 'rgba(139, 92, 246, 0.1)',
-                    },
-                    '&.Mui-selected': {
-                      color: '#fff',
-                      background: 'linear-gradient(135deg, #8b5cf6 0%, rgba(139, 92, 246, 0.7) 100%)',
-                      boxShadow: '0 4px 15px rgba(139, 92, 246, 0.4)',
-                    }
-                  }}
-                />
-              </Tabs>
+                <ChevronLeftIcon fontSize="small" />
+              </IconButton>
+
+              <Box
+                ref={scrollRef}
+                sx={{
+                  display: 'flex',
+                  gap: 1,
+                  p: 0.5,
+                  borderRadius: 4,
+                  background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(139, 92, 246, 0.08) 100%)',
+                  backdropFilter: 'blur(20px)',
+                  border: '1px solid rgba(102, 126, 234, 0.2)',
+                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)',
+                  overflowX: 'auto',
+                  scrollbarWidth: 'none',
+                  '&::-webkit-scrollbar': { display: 'none' },
+                  flexShrink: 1,
+                  minWidth: 0,
+                }}
+              >
+                {filterTabs.map((tab, idx) => (
+                  <Button
+                    key={idx}
+                    startIcon={tab.icon}
+                    onClick={() => setSelectedTab(idx)}
+                    sx={{
+                      color: selectedTab === idx ? '#fff' : '#909090',
+                      fontWeight: 600,
+                      fontSize: { xs: '0.8rem', md: '0.95rem' },
+                      py: { xs: 1, md: 1.5 },
+                      px: { xs: 2, md: 3 },
+                      minWidth: 'max-content',
+                      borderRadius: 3,
+                      textTransform: 'none',
+                      whiteSpace: 'nowrap',
+                      flexShrink: 0,
+                      transition: 'all 0.3s ease',
+                      background: selectedTab === idx
+                        ? `linear-gradient(135deg, ${tab.color} 0%, ${alpha(tab.color, 0.7)} 100%)`
+                        : 'transparent',
+                      boxShadow: selectedTab === idx
+                        ? `0 4px 15px ${alpha(tab.color, 0.4)}`
+                        : 'none',
+                      '&:hover': {
+                        color: selectedTab === idx ? '#fff' : tab.color,
+                        background: selectedTab === idx
+                          ? `linear-gradient(135deg, ${tab.color} 0%, ${alpha(tab.color, 0.7)} 100%)`
+                          : alpha(tab.color, 0.1),
+                      },
+                    }}
+                  >
+                    {tab.label}
+                  </Button>
+                ))}
+              </Box>
+
+              {/* Right arrow - only on mobile */}
+              <IconButton
+                onClick={handleScrollRight}
+                sx={{
+                  display: { xs: 'flex', md: 'none' },
+                  color: '#909090',
+                  flexShrink: 0,
+                  background: 'rgba(102, 126, 234, 0.1)',
+                  border: '1px solid rgba(102, 126, 234, 0.2)',
+                  width: 36,
+                  height: 36,
+                  '&:hover': { background: 'rgba(102, 126, 234, 0.2)' },
+                }}
+              >
+                <ChevronRightIcon fontSize="small" />
+              </IconButton>
             </Box>
         </Box>
       </motion.div>
@@ -341,15 +352,18 @@ function Projects() {
                   <Box
                     sx={{
                       position: 'absolute',
-                      top: -18,
-                      right: 24,
+                      top: { xs: -12, md: -18 },
+                      right: { xs: 8, md: 24 },
                       zIndex: 1,
                       display: 'flex',
-                      gap: 1.5,
+                      gap: { xs: 0.5, md: 1.5 },
+                      flexWrap: 'wrap',
+                      justifyContent: 'flex-end',
+                      maxWidth: { xs: 'calc(100% - 16px)', md: 'auto' },
                     }}
                   >
                     <Chip
-                      icon={project.status === 'completed' ? <CheckCircleIcon /> : <AccessTimeIcon />}
+                      icon={project.status === 'completed' ? <CheckCircleIcon sx={{ fontSize: { xs: 16, md: 20 } }} /> : <AccessTimeIcon sx={{ fontSize: { xs: 16, md: 20 } }} />}
                       label={project.status === 'completed' ? t('projects.completed') : t('projects.inProgress')}
                       sx={{
                         background: project.status === 'completed'
@@ -357,55 +371,41 @@ function Projects() {
                           : 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
                         color: '#fff',
                         fontWeight: 700,
-                        fontSize: '0.85rem',
-                        py: 2.5,
-                        px: 1.5,
+                        fontSize: { xs: '0.65rem', md: '0.85rem' },
+                        height: { xs: 26, md: 36 },
                         boxShadow: project.status === 'completed'
-                          ? '0 6px 20px rgba(16, 185, 129, 0.5)'
-                          : '0 6px 20px rgba(245, 158, 11, 0.5)',
+                          ? '0 4px 12px rgba(16, 185, 129, 0.5)'
+                          : '0 4px 12px rgba(245, 158, 11, 0.5)',
                         border: 'none',
-                        backdropFilter: 'blur(10px)',
-                        transition: 'all 0.3s ease',
-                        '&:hover': {
-                          transform: 'translateY(-3px)',
-                          boxShadow: project.status === 'completed'
-                            ? '0 8px 25px rgba(16, 185, 129, 0.6)'
-                            : '0 8px 25px rgba(245, 158, 11, 0.6)',
-                        }
+                        '& .MuiChip-icon': { ml: { xs: 0.3, md: 0.5 } },
                       }}
                     />
                     {project.projectType && (
                       <Chip
-                        icon={project.projectType === 'personal' ? <PersonIcon /> : <BusinessIcon />}
+                        icon={project.projectType === 'personal' ? <PersonIcon sx={{ fontSize: { xs: 16, md: 20 } }} /> : <BusinessIcon sx={{ fontSize: { xs: 16, md: 20 } }} />}
                         label={typeInfo.label}
                         sx={{
                           background: `linear-gradient(135deg, ${typeInfo.color} 0%, ${alpha(typeInfo.color, 0.7)} 100%)`,
                           color: '#fff',
                           fontWeight: 700,
-                          fontSize: '0.85rem',
-                          py: 2.5,
-                          px: 1.5,
-                          boxShadow: `0 6px 20px ${alpha(typeInfo.color, 0.5)}`,
+                          fontSize: { xs: '0.65rem', md: '0.85rem' },
+                          height: { xs: 26, md: 36 },
+                          boxShadow: `0 4px 12px ${alpha(typeInfo.color, 0.5)}`,
                           border: 'none',
-                          backdropFilter: 'blur(10px)',
-                          transition: 'all 0.3s ease',
-                          '&:hover': {
-                            transform: 'translateY(-3px)',
-                            boxShadow: `0 8px 25px ${alpha(typeInfo.color, 0.6)}`,
-                          }
+                          '& .MuiChip-icon': { ml: { xs: 0.3, md: 0.5 } },
                         }}
                       />
                     )}
                   </Box>
 
-                  <CardContent sx={{ p: 5 }}>
+                  <CardContent sx={{ p: { xs: 2.5, sm: 3, md: 5 }, pt: { xs: 3.5, md: 5 } }}>
                     <Grid container spacing={3}>
                       {/* Icon Section */}
-                      <Grid item xs={12} md={2} sx={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }}>
+                      <Grid size={{ xs: 12, md: 2 }} sx={{ display: 'flex', alignItems: 'flex-start', justifyContent: { xs: 'flex-start', md: 'center' } }}>
                         <Box
                           sx={{
-                            width: 90,
-                            height: 90,
+                            width: { xs: 60, md: 90 },
+                            height: { xs: 60, md: 90 },
                             borderRadius: 4,
                             display: 'flex',
                             alignItems: 'center',
@@ -427,12 +427,12 @@ function Projects() {
                             }
                           }}
                         >
-                          <IconComponent sx={{ fontSize: 45, position: 'relative', zIndex: 1 }} />
+                          <IconComponent sx={{ fontSize: { xs: 30, md: 45 }, position: 'relative', zIndex: 1 }} />
                         </Box>
                       </Grid>
 
                       {/* Content Section */}
-                      <Grid item xs={12} md={10}>
+                      <Grid size={{ xs: 12, md: 10 }}>
                         {/* Title & Period */}
                         <Box sx={{ mb: 2.5 }}>
                           <Typography
@@ -621,13 +621,13 @@ function Projects() {
       </motion.div>
 
         {/* Stats Section */}
-        <Box sx={{ mt: 8, mb: 8, textAlign: 'center' }}>
-          <Grid container spacing={3} justifyContent="center">
+        <Box sx={{ mt: { xs: 4, md: 8 }, mb: { xs: 4, md: 8 }, textAlign: 'center' }}>
+          <Grid container spacing={{ xs: 2, md: 3 }} justifyContent="center">
             {currentStats.map((stat, idx) => {
               const Icon = stat.IconComponent
 
               return (
-                <Grid item xs={12} md={4} key={stat.label}>
+                <Grid size={{ xs: 6, md: 4 }} key={stat.label}>
                   <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -635,14 +635,14 @@ function Projects() {
                   >
                     <Box
                       sx={{
-                        p: 4,
-                        borderRadius: 4,
+                        p: { xs: 2, md: 4 },
+                        borderRadius: { xs: 3, md: 4 },
                         background: `linear-gradient(135deg, ${alpha(stat.color, 0.1)} 0%, ${alpha(stat.color, 0.05)} 100%)`,
                         backdropFilter: 'blur(20px)',
                         border: `2px solid ${alpha(stat.color, 0.3)}`,
                         height: '100%',
                         display: 'flex',
-                        minWidth: 210,
+                        minWidth: 0,
                         flexDirection: 'column',
                         justifyContent: 'center',
                         alignItems: 'center',
@@ -655,8 +655,8 @@ function Projects() {
                         }
                       }}
                     >
-                      <Icon sx={{ fontSize: 48, color: stat.color, mb: 2 }} />
-                      <Typography variant="h3" sx={{ fontWeight: 900, color: stat.color, mb: 1 }}>
+                      <Icon sx={{ fontSize: { xs: 32, md: 48 }, color: stat.color, mb: { xs: 1, md: 2 } }} />
+                      <Typography variant="h3" sx={{ fontWeight: 900, color: stat.color, mb: 1, fontSize: { xs: '1.5rem', md: '2.5rem' } }}>
                         {stat.value}
                       </Typography>
                       <Typography variant="body1" sx={{ color: '#a0a0a0', fontWeight: 600 }}>

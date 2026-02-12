@@ -119,7 +119,7 @@ function About() {
 
                 <Grid container spacing={3} justifyContent="center" sx={{ flex: 1 }}>
                     {highlights.map((item, index) => (
-                        <Grid item xs={12} md={4} key={index}>
+                        <Grid size={{ xs: 12, md: 4 }} key={index}>
                             <Card sx={{ background: `linear-gradient(135deg, ${alpha(item.color, 0.08)} 0%, ${alpha(item.color, 0.03)} 100%)`, backdropFilter: 'blur(20px)', border: `2px solid ${alpha(item.color, 0.25)}`, borderRadius: 4, transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)', height: '100%', boxShadow: `0 8px 32px ${alpha(item.color, 0.15)}`, '&:hover': { transform: 'translateY(-8px) scale(1.02)', boxShadow: `0 20px 40px ${alpha(item.color, 0.35)}`, border: `2px solid ${alpha(item.color, 0.5)}` } }}>
                                 <CardContent sx={{ p: 3.5 }}>
                                     <Stack spacing={2} alignItems="center" textAlign="center">
@@ -138,7 +138,7 @@ function About() {
                 </Grid>
                 <Box pb={3} py={3} mx={1}>
                     <Grid container spacing={3} justifyContent="center" sx={{ flex: 1, }}>
-                        <Grid item xs={12}>
+                        <Grid size={12}>
                             <Paper sx={{ p: 3.5, background: 'linear-gradient(135deg, rgba(118, 75, 162, 0.08) 0%, rgba(217, 70, 239, 0.08) 100%)', backdropFilter: 'blur(20px)', border: '2px solid rgba(118, 75, 162, 0.25)', borderRadius: 4, boxShadow: '0 8px 32px rgba(118, 75, 162, 0.15)' }}>
                                 <Typography variant="h6" sx={{ fontWeight: 800, color: '#f0f0f0', mb: 3, fontSize: '1.25rem' }}>Key Skills</Typography>
                                 <Stack direction="row" spacing={1} sx={{ flexWrap: 'wrap', gap: 1 }}>
@@ -154,7 +154,7 @@ function About() {
                 {/* Contact Section */}
                 <Box pb={3} mx={1}>
                     <Grid container spacing={3} justifyContent="center">
-                        <Grid item xs={12} md={8}>
+                        <Grid size={{ xs: 12, md: 8 }}>
                             <Paper
                                 sx={{
                                     p: 4.5,
@@ -239,7 +239,7 @@ function About() {
                         </Grid>
 
                         {/* Availability */}
-                        <Grid item xs={12} md={4}>
+                        <Grid size={{ xs: 12, md: 4 }}>
                             <Paper
                                 sx={{
                                     p: 4.5,

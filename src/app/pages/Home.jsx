@@ -255,7 +255,7 @@ function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
             >
-              <Stack direction="row" spacing={2} sx={{ mb: 5, flexWrap: 'wrap', justifyContent: 'center' }}>
+              <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} sx={{ mb: 5, flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }}>
                 <Chip
                   icon={<SchoolIcon />}
                   label={t('home.degree')}
@@ -264,9 +264,12 @@ function Home() {
                     backdropFilter: 'blur(10px)',
                     color: '#d0d0d0',
                     fontWeight: 600,
-                    fontSize: '0.95rem',
-                    px: 2,
-                    py: 2.5,
+                    fontSize: { xs: '0.75rem', sm: '0.85rem', md: '0.95rem' },
+                    px: { xs: 1, md: 2 },
+                    py: { xs: 2, md: 2.5 },
+                    maxWidth: { xs: '100%', sm: 'auto' },
+                    height: 'auto',
+                    '& .MuiChip-label': { whiteSpace: 'normal', textAlign: 'center' },
                     border: '1px solid rgba(102, 126, 234, 0.4)',
                     boxShadow: '0 4px 15px rgba(102, 126, 234, 0.2)',
                     transition: 'all 0.3s ease',
@@ -285,9 +288,12 @@ function Home() {
                     backdropFilter: 'blur(10px)',
                     color: '#d0d0d0',
                     fontWeight: 600,
-                    fontSize: '0.95rem',
-                    px: 2,
-                    py: 2.5,
+                    fontSize: { xs: '0.75rem', sm: '0.85rem', md: '0.95rem' },
+                    px: { xs: 1, md: 2 },
+                    py: { xs: 2, md: 2.5 },
+                    maxWidth: { xs: '100%', sm: 'auto' },
+                    height: 'auto',
+                    '& .MuiChip-label': { whiteSpace: 'normal', textAlign: 'center' },
                     border: '1px solid rgba(139, 92, 246, 0.4)',
                     boxShadow: '0 4px 15px rgba(139, 92, 246, 0.2)',
                     transition: 'all 0.3s ease',
@@ -482,9 +488,9 @@ function Home() {
         </Fade>
 
         {/* Stats Section */}
-        <Grid container spacing={3} justifyContent="center" sx={{ mb: 8 }}>
+        <Grid container spacing={{ xs: 2, md: 3 }} justifyContent="center" sx={{ mb: 8 }}>
           {stats.map((stat, index) => (
-            <Grid item xs={12} md={4} key={stat.label}>
+            <Grid size={{ xs: 4, md: 4 }} key={stat.label}>
               <Zoom in timeout={1000 + (index * 200)}>
                 <Card
                   sx={{
@@ -495,7 +501,7 @@ function Home() {
                     transition: 'all 0.3s ease',
                     height: '100%',
                     display: 'flex',
-                    minWidth: 170,
+                    minWidth: 0,
                     flexDirection: 'column',
                     '&:hover': {
                       transform: 'translateY(-8px)',
@@ -506,7 +512,8 @@ function Home() {
                 >
                   <CardContent sx={{
                     textAlign: 'center',
-                    py: 4,
+                    py: { xs: 2, md: 4 },
+                    px: { xs: 1, md: 2 },
                     flexGrow: 1,
                     display: 'flex',
                     flexDirection: 'column',
@@ -519,6 +526,7 @@ function Home() {
                       variant="h2"
                       sx={{
                         fontWeight: 800,
+                        fontSize: { xs: '1.5rem', sm: '2rem', md: '3rem' },
                         background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
@@ -527,10 +535,10 @@ function Home() {
                     >
                       {stat.value}
                     </Typography>
-                    <Typography variant="h6" sx={{ color: '#b0b0b0', fontWeight: 600, mb: 0.5 }}>
+                    <Typography variant="h6" sx={{ color: '#b0b0b0', fontWeight: 600, mb: 0.5, fontSize: { xs: '0.7rem', sm: '0.85rem', md: '1.1rem' } }}>
                       {stat.label}
                     </Typography>
-                    <Typography variant="body2" sx={{ color: '#808080' }}>
+                    <Typography variant="body2" sx={{ color: '#808080', fontSize: { xs: '0.6rem', sm: '0.75rem', md: '0.875rem' } }}>
                       {stat.subtitle}
                     </Typography>
                   </CardContent>
