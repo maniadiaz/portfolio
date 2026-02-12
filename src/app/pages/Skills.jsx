@@ -29,15 +29,15 @@ function Skills() {
       icon: <WebIcon />,
       color: '#667eea',
       skills: [
-        { name: 'React', level: 85, experience: '18 months', icon: '⚛️' },
+        { name: 'React', level: 85, experience: '12 months', icon: '⚛️' },
         { name: 'Angular', level: 75, experience: '6 months', icon: '🅰️' },
         { name: 'JavaScript', level: 90, experience: '18 months', icon: '📜' },
         { name: 'TypeScript', level: 80, experience: '12 months', icon: '💎' },
         { name: 'HTML5', level: 95, experience: '18 months', icon: '🌐' },
         { name: 'CSS3', level: 90, experience: '18 months', icon: '🎨' },
-        { name: 'Vite', level: 85, experience: '8 months', icon: '⚡' },
+        { name: 'Vite', level: 85, experience: '12 months', icon: '⚡' },
         { name: 'Ionic', level: 75, experience: '6 months', icon: '📱' },
-        { name: 'Material UI', level: 80, experience: '18 months', icon: '🎭' },
+        { name: 'Material UI', level: 80, experience: '12 months', icon: '🎭' },
       ]
     },
     {
@@ -46,12 +46,12 @@ function Skills() {
       icon: <ApiIcon />,
       color: '#764ba2',
       skills: [
-        { name: 'Node.js', level: 80, experience: '18 months', icon: '🟢' },
-        { name: 'Express', level: 85, experience: '18 months', icon: '🚂' },
+        { name: 'Node.js', level: 80, experience: '12 months', icon: '🟢' },
+        { name: 'Express', level: 85, experience: '12 months', icon: '🚂' },
         { name: 'PHP', level: 85, experience: '12 months', icon: '🐘' },
         { name: 'C#', level: 70, experience: '6 months', icon: '#️⃣' },
         { name: '.NET', level: 70, experience: '6 months', icon: '🔷' },
-        { name: 'Sequelize', level: 80, experience: '18 months', icon: '🔗' },
+        { name: 'Sequelize', level: 80, experience: '12 months', icon: '🔗' },
       ]
     },
     {
@@ -73,7 +73,7 @@ function Skills() {
       icon: <CloudIcon />,
       color: '#10b981',
       skills: [
-        { name: 'Git', level: 85, experience: '18+ months', icon: '🔀' },
+        { name: 'Git', level: 85, experience: '12+ months', icon: '🔀' },
         { name: 'VPS Management', level: 75, experience: '12 months', icon: '☁️' },
         { name: 'Nginx', level: 70, experience: '12 months', icon: '🌐' },
         { name: 'Bind9 (DNS)', level: 65, experience: '12 months', icon: '🔗' },
