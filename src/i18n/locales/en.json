@@ -56,8 +56,8 @@
     "list": {
       "serviapp": {
         "title": "Servi App",
-        "subtitle": "AmericasIoT - Service Management Application",
-        "period": "November 2024 - December 2024",
+        "subtitle": "Locmex (AmericasIoT) - Service Management Application",
+        "period": "November 2025 - January 2026",
         "description": "Mobile service management application built with Angular, Ionic, and Supabase. Features real-time notifications and comprehensive service tracking capabilities for field operations.",
         "responsibilities": [
           "Frontend development with Angular TypeScript and Ionic framework",
@@ -71,8 +71,8 @@
       },
       "sims": {
         "title": "SIM Management System",
-        "subtitle": "AmericasIoT - SIM Card Management System",
-        "period": "January 2026 - Present",
+        "subtitle": "Locmex (AmericasIoT) - SIM Card Management System",
+        "period": "January 2026",
         "description": "Complete SIM card management system using emnify API. Development of RESTful backend APIs and frontend for data management and export.",
         "responsibilities": [
           "Backend RESTful APIs development using emnify documentation",
@@ -140,8 +140,8 @@
       },
       "pushNotifications": {
         "title": "Push Notifications System",
-        "subtitle": "Instituto Cultural de Occidente - Colegio Xaveriano de Mazatlán",
-        "period": "August 2024",
+        "subtitle": "CertexAI - AmericasIoT Platform",
+        "period": "September 2025",
         "description": "Implementation of push notification system for an educational institution, enabling real-time communication with students and staff through web notifications.",
         "responsibilities": [
           "UI design and implementation for push notification management section",
@@ -152,8 +152,8 @@
       },
       "gpsManagement": {
         "title": "GPS & User Management Application",
-        "subtitle": "Focused on Resellers",
-        "period": "May 2024 - August 2024",
+        "subtitle": "CertexAI - AmericasIoT Platform",
+        "period": "March 2025 - September 2025",
         "description": "Mobile and web application for real-time management of GPS devices and users, with advanced features for resellers.",
         "responsibilities": [
           "Development of CRUD modules for user and GPS device management",
@@ -251,6 +251,21 @@
           "Real-time progress bar",
           "Persistent configuration in config.json",
           "Logging system and connection testing"
+        ]
+      },
+      "desktopApps": {
+        "title": "Desktop Document Management Applications",
+        "subtitle": "CertexAI - Full Stack Desktop Development",
+        "period": "September 2025 - November 2025",
+        "description": "Full stack development of desktop applications for document management, including visualization, basic editing, and PDF file conversions, with focus on usability and performance.",
+        "responsibilities": [
+          "Full stack desktop application development with .NET and C#",
+          "PDF document viewer and basic editing implementation",
+          "File conversion system (PDF and other formats)",
+          "SQLite database integration for data management",
+          "UI/UX design with focus on usability",
+          "Performance optimization for large documents",
+          "Blazor Pages and Razor Pages implementation"
         ]
       },
       "cvGeneratorFrontend": {

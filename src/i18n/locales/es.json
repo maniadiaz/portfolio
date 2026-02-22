@@ -56,8 +56,8 @@
     "list": {
       "serviapp": {
         "title": "Servi App",
-        "subtitle": "AmericasIoT - Aplicación de Gestión de Servicios",
-        "period": "Noviembre 2024 - Diciembre 2024",
+        "subtitle": "Locmex (AmericasIoT) - Aplicación de Gestión de Servicios",
+        "period": "Noviembre 2025 - Enero 2026",
         "description": "Aplicación móvil de gestión de servicios construida con Angular, Ionic y Supabase. Cuenta con notificaciones en tiempo real y capacidades completas de seguimiento de servicios para operaciones de campo.",
         "responsibilities": [
           "Desarrollo frontend con Angular TypeScript y framework Ionic",
@@ -71,8 +71,8 @@
       },
       "sims": {
         "title": "Sistema de Gestión de SIMs",
-        "subtitle": "AmericasIoT - Sistema de Gestión de Tarjetas SIM",
-        "period": "Enero 2026 - Presente",
+        "subtitle": "Locmex (AmericasIoT) - Sistema de Gestión de Tarjetas SIM",
+        "period": "Enero 2026",
         "description": "Sistema completo de gestión de tarjetas SIM utilizando la API de emnify. Desarrollo de backend APIs RESTful y frontend para gestión y exportación de datos.",
         "responsibilities": [
           "Desarrollo de APIs RESTful backend utilizando documentación emnify",
@@ -140,8 +140,8 @@
       },
       "pushNotifications": {
         "title": "Sistema de Notificaciones Push",
-        "subtitle": "Instituto Cultural de Occidente - Colegio Xaveriano de Mazatlán",
-        "period": "Agosto 2024",
+        "subtitle": "CertexAI - Plataforma AmericasIoT",
+        "period": "Septiembre 2025",
         "description": "Implementación de sistema de notificaciones push para una institución educativa, permitiendo comunicación en tiempo real con estudiantes y personal a través de notificaciones web.",
         "responsibilities": [
           "Diseño e implementación de UI para sección de gestión de notificaciones push",
@@ -152,8 +152,8 @@
       },
       "gpsManagement": {
         "title": "Aplicación de Gestión de GPS y Usuarios",
-        "subtitle": "Enfocado en Revendedores",
-        "period": "Mayo 2024 - Agosto 2024",
+        "subtitle": "CertexAI - Plataforma AmericasIoT",
+        "period": "Marzo 2025 - Septiembre 2025",
         "description": "Aplicación móvil y web para gestión en tiempo real de dispositivos GPS y usuarios, con características avanzadas para revendedores.",
         "responsibilities": [
           "Desarrollo de módulos CRUD para gestión de usuarios y dispositivos GPS",
@@ -251,6 +251,21 @@
           "Barra de progreso en tiempo real",
           "Configuración persistente en config.json",
           "Sistema de logs y prueba de conexión"
+        ]
+      },
+      "desktopApps": {
+        "title": "Aplicaciones de Escritorio para Gestión de Documentos",
+        "subtitle": "CertexAI - Desarrollo Full Stack Desktop",
+        "period": "Septiembre 2025 - Noviembre 2025",
+        "description": "Desarrollo full stack de aplicaciones de escritorio para la gestión de documentos, incluyendo visualización, edición básica y conversiones de archivos PDF, con enfoque en usabilidad y rendimiento.",
+        "responsibilities": [
+          "Desarrollo full stack de aplicaciones de escritorio con .NET y C#",
+          "Implementación de visualizador de documentos PDF y edición básica",
+          "Sistema de conversión de archivos (PDF y otros formatos)",
+          "Integración de base de datos SQLite para gestión de datos",
+          "Diseño de UI/UX con enfoque en usabilidad",
+          "Optimización de rendimiento para documentos grandes",
+          "Implementación con Blazor Pages y Razor Pages"
         ]
       },
       "cvGeneratorFrontend": {
