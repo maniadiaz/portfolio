@@ -309,6 +309,60 @@
           "Mobile-first responsive design"
         ]
       },
+      "apexCRM": {
+        "title": "ApexCRM - CRM SaaS",
+        "subtitle": "ApexMesh Network - Multi-Tenant CRM Platform with AI Chatbot",
+        "period": "March 2026 - Present",
+        "description": "Multi-tenant CRM (SaaS) with WhatsApp integration, AI chatbot (OpenAI GPT), billing with Mercado Pago, and full administration panel. Full-stack architecture with React + TypeScript on frontend and Node.js + Express on backend, PostgreSQL multi-tenant by schema and Redis for caching.",
+        "responsibilities": [
+          "Full frontend development with React 18, TypeScript, Vite and Material UI",
+          "Backend development with Node.js, Express, TypeScript and Sequelize",
+          "PostgreSQL multi-tenant database design by schema",
+          "WhatsApp Cloud API and 360Dialog integration for messaging",
+          "AI chatbot implementation with OpenAI (GPT) for scheduling appointments, creating orders and querying catalog",
+          "Billing and subscription system with Mercado Pago (Checkout API / Card Payment Brick)",
+          "File storage with Cloudflare R2 (S3-compatible API)",
+          "JWT authentication system with refresh tokens and session management",
+          "Roles and permissions: super_admin, admin, agent, viewer, developer, tester",
+          "Support tickets, WhatsApp inbox and escalations to human agent",
+          "In-app notifications and transactional emails",
+          "Audit log of important actions",
+          "Docker + Docker Compose infrastructure, SQL migrations and data seeds"
+        ]
+      },
+      "apexMeshLanding": {
+        "title": "ApexMesh Network - Landing Page",
+        "subtitle": "Professional OnePage Landing for ApexMesh Network",
+        "period": "March 2026",
+        "description": "Professional OnePage landing page for ApexMesh Network, a residential and enterprise IT services company. Modern design with smooth animations, multilingual support (Spanish, English, French), 100% responsive and animated mesh network effects.",
+        "responsibilities": [
+          "Full frontend development with React 18, TypeScript and Vite 7",
+          "Modern UI/UX design with Material UI v7 and brand color palette",
+          "Smooth animations with Framer Motion and mesh network effects",
+          "Full internationalization in 3 languages (Spanish, English, French)",
+          "Responsive hamburger menu for mobile navigation",
+          "Service cards with hover effects and uniform height",
+          "Code-splitting to optimize bundle size",
+          "Native CSS Grid for optimized responsive layouts",
+          "Custom scrollbar with brand gradient"
+        ]
+      },
+      "apexMeshVPS": {
+        "title": "ApexMesh Server/VPS Management",
+        "subtitle": "ApexMesh Network - Infrastructure Administration",
+        "period": "March 2026 - Present",
+        "description": "Complete VPS server management for ApexMesh Network, including DNS configuration with Bind9 and Cloudflare, .MX and .CA domain management, Nginx reverse proxy configuration, SSL/TLS certificates and Docker deployment.",
+        "responsibilities": [
+          "VPS server administration and configuration (Linux)",
+          "DNS configuration with Bind9 and Cloudflare",
+          "Domain and subdomain management (.MX and .CA)",
+          "Nginx reverse proxy configuration",
+          "SSL/TLS certificate implementation",
+          "Application deployment with Docker and Docker Compose",
+          "Server monitoring and maintenance",
+          "Automated database backups"
+        ]
+      },
       "cvGeneratorBackend": {
         "title": "CV Generator - Backend API",
         "subtitle": "RESTful API for CV Generation",

@@ -12,8 +12,56 @@ import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstruct
 import DescriptionIcon from '@mui/icons-material/Description'
 import ApiIcon from '@mui/icons-material/Api'
 import SearchIcon from '@mui/icons-material/Search'
+import BusinessCenterIcon from '@mui/icons-material/BusinessCenter'
+import LanguageIcon from '@mui/icons-material/Language'
+import DnsIcon from '@mui/icons-material/Dns'
 
 export const getWebProjects = (t) => [
+  {
+    id: 14,
+    title: t('projects.list.apexCRM.title'),
+    subtitle: t('projects.list.apexCRM.subtitle'),
+    period: t('projects.list.apexCRM.period'),
+    status: 'in-progress',
+    projectType: 'company',
+    company: 'ApexMesh Network',
+    githubLink: null,
+    description: t('projects.list.apexCRM.description'),
+    responsibilities: t('projects.list.apexCRM.responsibilities', { returnObjects: true }),
+    technologies: ['React', 'TypeScript', 'Vite', 'Material UI', 'Node.js', 'Express', 'Sequelize', 'PostgreSQL', 'Redis', 'OpenAI API', 'WhatsApp Cloud API', 'Mercado Pago', 'Cloudflare R2', 'Docker', 'JWT'],
+    icon: BusinessCenterIcon,
+    color: '#38BDF8'
+  },
+  {
+    id: 15,
+    title: t('projects.list.apexMeshLanding.title'),
+    subtitle: t('projects.list.apexMeshLanding.subtitle'),
+    period: t('projects.list.apexMeshLanding.period'),
+    status: 'completed',
+    projectType: 'company',
+    company: 'ApexMesh Network',
+    githubLink: null,
+    description: t('projects.list.apexMeshLanding.description'),
+    responsibilities: t('projects.list.apexMeshLanding.responsibilities', { returnObjects: true }),
+    technologies: ['React', 'TypeScript', 'Vite', 'Material UI v7', 'Framer Motion', 'react-i18next', 'CSS Grid'],
+    icon: LanguageIcon,
+    color: '#A855F7'
+  },
+  {
+    id: 16,
+    title: t('projects.list.apexMeshVPS.title'),
+    subtitle: t('projects.list.apexMeshVPS.subtitle'),
+    period: t('projects.list.apexMeshVPS.period'),
+    status: 'in-progress',
+    projectType: 'company',
+    company: 'ApexMesh Network',
+    githubLink: null,
+    description: t('projects.list.apexMeshVPS.description'),
+    responsibilities: t('projects.list.apexMeshVPS.responsibilities', { returnObjects: true }),
+    technologies: ['Linux', 'Nginx', 'Bind9', 'Cloudflare', 'DNS', 'VPS', 'Docker', 'SSL/TLS'],
+    icon: DnsIcon,
+    color: '#2563EB'
+  },
   {
     id: 1,
     title: t('projects.list.cvGeneratorFrontend.title'),
@@ -264,7 +312,7 @@ export const getPythonProjects = (t) => [
 
 export const getWebStats = (t) => [
   {
-    value: '13',
+    value: '16',
     label: t('projects.stats.webCompleted'),
     IconComponent: IntegrationInstructionsIcon,
     color: '#667eea',

@@ -30,8 +30,8 @@ function Projects() {
   const scrollRef = useRef(null)
 
   const filterTabs = [
-    { label: t('projects.personalProjects'), icon: <PersonIcon />, color: '#10b981' },
     { label: t('projects.companyProjects'), icon: <BusinessIcon />, color: '#667eea' },
+    { label: t('projects.personalProjects'), icon: <PersonIcon />, color: '#10b981' },
     { label: t('projects.pythonProjects'), icon: <IntegrationInstructionsIcon />, color: '#8b5cf6' },
   ]
 
@@ -45,10 +45,10 @@ function Projects() {
   // Determinar proyectos y stats actuales según la pestaña
   const getCurrentProjects = () => {
     switch(selectedTab) {
-      case 0: return personalProjects
-      case 1: return companyProjects
+      case 0: return companyProjects
+      case 1: return personalProjects
       case 2: return pythonProjects
-      default: return personalProjects
+      default: return companyProjects
     }
   }
 

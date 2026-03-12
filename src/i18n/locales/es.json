@@ -309,6 +309,60 @@
           "Diseño responsive mobile-first"
         ]
       },
+      "apexCRM": {
+        "title": "ApexCRM - CRM SaaS",
+        "subtitle": "ApexMesh Network - Plataforma CRM Multi-Tenant con Chatbot IA",
+        "period": "Marzo 2026 - Presente",
+        "description": "CRM multi-tenant (SaaS) con integración a WhatsApp, chatbot con IA (OpenAI GPT), facturación con Mercado Pago y panel de administración completo. Arquitectura full-stack con React + TypeScript en frontend y Node.js + Express en backend, PostgreSQL multi-tenant por schema y Redis para cache.",
+        "responsibilities": [
+          "Desarrollo frontend completo con React 18, TypeScript, Vite y Material UI",
+          "Desarrollo backend con Node.js, Express, TypeScript y Sequelize",
+          "Diseño de base de datos PostgreSQL multi-tenant por schema",
+          "Integración de WhatsApp Cloud API y 360Dialog para mensajería",
+          "Implementación de chatbot IA con OpenAI (GPT) para agendar citas, crear pedidos y consultar catálogo",
+          "Sistema de facturación y suscripciones con Mercado Pago (Checkout API / Card Payment Brick)",
+          "Almacenamiento de archivos con Cloudflare R2 (API S3-compatible)",
+          "Sistema de autenticación JWT con refresh tokens y gestión de sesiones",
+          "Roles y permisos: super_admin, admin, agent, viewer, developer, tester",
+          "Tickets de soporte, bandeja de entrada WhatsApp y escalaciones a agente humano",
+          "Notificaciones in-app y emails transaccionales",
+          "Audit log de acciones importantes",
+          "Infraestructura Docker + Docker Compose, migraciones SQL y seeds de datos"
+        ]
+      },
+      "apexMeshLanding": {
+        "title": "ApexMesh Network - Landing Page",
+        "subtitle": "Landing Page Profesional OnePage para ApexMesh Network",
+        "period": "Marzo 2026",
+        "description": "Landing page profesional tipo OnePage para ApexMesh Network, empresa de servicios IT residenciales y empresariales. Diseño moderno con animaciones fluidas, soporte multiidioma (Español, Inglés, Francés), 100% responsive y efectos de mesh network animados.",
+        "responsibilities": [
+          "Desarrollo frontend completo con React 18, TypeScript y Vite 7",
+          "Diseño UI/UX moderno con Material UI v7 y paleta de colores de marca",
+          "Animaciones fluidas con Framer Motion y efectos de mesh network",
+          "Internacionalización completa en 3 idiomas (Español, Inglés, Francés)",
+          "Menú hamburguesa responsive para navegación móvil",
+          "Cards de servicios con hover effects y altura uniforme",
+          "Code-splitting para optimizar bundle size",
+          "CSS Grid nativo para layouts responsive optimizados",
+          "Scrollbar personalizado con gradiente de marca"
+        ]
+      },
+      "apexMeshVPS": {
+        "title": "Gestión de Servidor/VPS ApexMesh",
+        "subtitle": "ApexMesh Network - Administración de Infraestructura",
+        "period": "Marzo 2026 - Presente",
+        "description": "Gestión completa del servidor VPS para ApexMesh Network, incluyendo configuración de DNS con Bind9 y Cloudflare, gestión de dominios .MX y .CA, configuración de Nginx como reverse proxy, certificados SSL/TLS y despliegue con Docker.",
+        "responsibilities": [
+          "Administración y configuración del servidor VPS (Linux)",
+          "Configuración de DNS con Bind9 y Cloudflare",
+          "Gestión de dominios y subdominios (.MX y .CA)",
+          "Configuración de Nginx como reverse proxy",
+          "Implementación de certificados SSL/TLS",
+          "Despliegue de aplicaciones con Docker y Docker Compose",
+          "Monitoreo y mantenimiento del servidor",
+          "Backups automáticos de base de datos"
+        ]
+      },
       "cvGeneratorBackend": {
         "title": "CV Generator - Backend API",
         "subtitle": "API RESTful para Generación de CVs",
