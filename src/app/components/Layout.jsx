@@ -18,14 +18,15 @@ function Layout() {
         flexDirection: 'column',
         minHeight: '100vh',
         position: 'relative',
-        minWidth: '100vw',
+        overflowX: 'hidden',
+        width: '100%',
       }}
     >
       <Navbar />
 
       <Container
         component="main"
-        maxWidth="100vw"
+        maxWidth="xl"
         sx={{
           flex: 1,
           py: 2,
@@ -33,6 +34,7 @@ function Layout() {
           flexDirection: 'column',
           position: 'relative',
           zIndex: 1,
+          overflowX: 'hidden',
         }}
       >
         <Outlet />

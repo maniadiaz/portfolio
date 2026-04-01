@@ -45,6 +45,9 @@
     "technologies": "Tecnologías Utilizadas",
     "viewGithub": "Ver en GitHub",
     "comingSoon": "Próximamente",
+    "seeMore": "Ver más",
+    "seeLess": "Ver menos",
+    "closeDetail": "Cerrar",
     "stats": {
       "webCompleted": "Proyectos Web Completados",
       "webTech": "Tecnologías Usadas",

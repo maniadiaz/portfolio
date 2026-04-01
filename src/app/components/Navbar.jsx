@@ -149,7 +149,7 @@ function Navbar() {
         transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
         sx={{ WebkitBackdropFilter: scrolled ? 'blur(16px) saturate(1.5)' : 'blur(0px)', }}
       >
-        <Container maxWidth="100wv">
+        <Container maxWidth="100vw">
           <Toolbar disableGutters sx={{ minHeight: 68 }}>
             {isMobile && (
               <IconButton
