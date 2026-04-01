@@ -1,16 +1,11 @@
 import { useEffect } from 'react'
-import { lazy, Suspense } from 'react'
 import { Routes, Route, useLocation  } from 'react-router-dom';
 import { initGA, logPageView } from './app/utils/analystic'
 import Layout from './app/components/Layout';
-
-import './App.css'
-
-// Lazy loading de páginas
-const Home = lazy(() => import('./app/pages/Home'))
-const Projects = lazy(() => import('./app/pages/Projects'))
-const Skills = lazy(() => import('./app/pages/Skills'))
-const About = lazy(() => import('./app/pages/About'))
+import Home from './app/pages/Home'
+import Projects from './app/pages/Projects'
+import Skills from './app/pages/Skills'
+import About from './app/pages/About'
 
 function App() {
   const location = useLocation()

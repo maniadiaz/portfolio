@@ -1,146 +1,225 @@
-* {
+/* ─── Google Fonts ──────────────────────────────────────────
+   Cormorant Garamond → display elegante para h1/h2 (serif editorial)
+   DM Sans           → sans limpia para body y UI
+   display=swap evita FOIT (flash of invisible text)
+──────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&display=swap');
+
+/* ─── Design tokens ─────────────────────────────────────────
+   Paleta obligatoria + variables semánticas de tipografía,
+   espaciado, radios, sombras y transiciones.
+──────────────────────────────────────────────────────────── */
+:root {
+  /* Paleta principal */
+  --color-1: #d8c5d5;   /* lavanda pálido  */
+  --color-2: #c6b2d7;   /* lila suave      */
+  --color-3: #a79dc3;   /* morado medio    */
+  --color-4: #7d82b0;   /* azul lavanda    */
+  --color-5: #4a598c;   /* azul índigo     */
+
+  /* Tipografía */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'DM Sans', 'Inter', system-ui, sans-serif;
+
+  /* Fondo y superficie */
+  --bg-base:    #0d0b14;
+  --bg-surface: rgba(255, 255, 255, 0.03);
+
+  /* Texto */
+  --text-primary:   #ede8f5;
+  --text-secondary: #b8afd0;
+  --text-muted:     #7a7090;
+
+  /* Radios */
+  --radius-sm:  8px;
+  --radius-md:  12px;
+  --radius-lg:  16px;
+  --radius-xl:  20px;
+  --radius-pill: 100px;
+
+  /* Sombras con la paleta */
+  --shadow-sm:  0 2px 8px  rgba(74, 89, 140, 0.15);
+  --shadow-md:  0 8px 24px rgba(74, 89, 140, 0.20);
+  --shadow-lg:  0 16px 48px rgba(74, 89, 140, 0.25);
+  --shadow-glow: 0 0 24px rgba(125, 130, 176, 0.30);
+
+  /* Transiciones estándar */
+  --transition-fast:   0.18s ease;
+  --transition-base:   0.28s ease;
+  --transition-slow:   0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-spring: 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ─── Reset ─────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ─── Smooth scroll global ──────────────────────────────────
+   scroll-behavior: smooth activa el desplazamiento suave
+   nativo del navegador en todos los anchor links y APIs
+   de scroll. scroll-padding-top compensa el navbar fijo.
+──────────────────────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  -webkit-text-size-adjust: 100%;
 }
 
+/* ─── Body base ─────────────────────────────────────────── */
 body {
-  margin: 0;
-  font-family: 'Inter', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  color: var(--text-primary);
+  background-color: var(--bg-base);
+  background-image:
+    radial-gradient(ellipse 80% 60% at 20% 10%,  rgba(167, 157, 195, 0.10) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 80% 80%,  rgba(74,  89,  140, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 50% 50%,  rgba(125, 130, 176, 0.06) 0%, transparent 70%);
+  background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(135deg, #0a0e1a 0%, #1a1625 50%, #0f0a1e 100%);
-  background-attachment: fixed;
-  color: #e2e8f0;
   overflow-x: hidden;
-  position: relative;
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: 
-    radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 40% 20%, rgba(217, 70, 239, 0.06) 0%, transparent 50%);
-  pointer-events: none;
-  z-index: 0;
+/* ─── Tipografía global ─────────────────────────────────────
+   h1/h2 usan la display serif para estética editorial.
+   h3–h6 usan la sans para legibilidad en tamaños menores.
+──────────────────────────────────────────────────────────── */
+h1, h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
+h3, h4, h5, h6 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* ─── Root app ──────────────────────────────────────────── */
 #root {
   min-height: 100vh;
   position: relative;
   z-index: 1;
 }
 
-/* Scrollbar personalizado con nuevo diseño */
+/* ─── Custom scrollbar ──────────────────────────────────────
+   Thumb: --color-4 (#7d82b0) sólido con glow sutil.
+   Track: --color-1 (#d8c5d5) muy transparente para no
+          competir con el fondo oscuro.
+   El border crea padding visual sin necesitar padding real.
+──────────────────────────────────────────────────────────── */
 ::-webkit-scrollbar {
-  width: 14px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(15, 23, 42, 0.8);
-  border-left: 1px solid rgba(102, 126, 234, 0.15);
-  backdrop-filter: blur(10px);
+  background: rgba(216, 197, 213, 0.06); /* --color-1 al 6% */
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #667eea 0%, #764ba2 50%, #8b5cf6 100%);
+  background: var(--color-4);            /* #7d82b0 sólido   */
   border-radius: 10px;
-  border: 3px solid rgba(15, 23, 42, 0.8);
-  box-shadow: 0 0 15px rgba(102, 126, 234, 0.4);
+  border: 2px solid var(--bg-base);      /* padding visual   */
+  box-shadow: 0 0 0 1px rgba(125, 130, 176, 0.20);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #7c8ff0 0%, #8b5cf6 50%, #a855f7 100%);
-  box-shadow: 0 0 20px rgba(139, 92, 246, 0.6);
+  background: var(--color-3);            /* #a79dc3 al hover */
+  box-shadow:
+    0 0 0 1px rgba(167, 157, 195, 0.30),
+    0 0 10px rgba(125, 130, 176, 0.45);
 }
 
-/* Animaciones globales mejoradas */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+::-webkit-scrollbar-corner {
+  background: transparent;
 }
 
-@keyframes fadeInScale {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes shimmer {
-  0% {
-    background-position: -1000px 0;
-  }
-  100% {
-    background-position: 1000px 0;
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-@keyframes glow {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(139, 92, 246, 0.6);
-  }
-}
-
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Transiciones suaves para elementos */
+/* Firefox scrollbar */
 * {
-  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-4) rgba(216, 197, 213, 0.06);
 }
 
-/* Estilos para selección de texto */
+/* ─── Text selection ────────────────────────────────────── */
 ::selection {
-  background: rgba(102, 126, 234, 0.3);
-  color: #ffffff;
+  background: rgba(125, 130, 176, 0.35);
+  color: #fff;
 }
 
 ::-moz-selection {
-  background: rgba(102, 126, 234, 0.3);
-  color: #ffffff;
+  background: rgba(125, 130, 176, 0.35);
+  color: #fff;
+}
+
+/* ─── Links base ────────────────────────────────────────── */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-base), opacity var(--transition-base);
+}
+
+/* ─── Smooth transitions en elementos interactivos ──────── */
+button, a, [role="button"] {
+  transition:
+    color            var(--transition-base),
+    background-color var(--transition-base),
+    border-color     var(--transition-base),
+    box-shadow       var(--transition-base),
+    transform        var(--transition-base),
+    opacity          var(--transition-base);
+}
+
+/* ─── Keyframes ─────────────────────────────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1);    }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px);   }
+  50%       { transform: translateY(-18px); }
+}
+
+@keyframes pulse-ring {
+  0%   { transform: scale(1);   opacity: 0.7; }
+  100% { transform: scale(1.9); opacity: 0;   }
+}
+
+@keyframes gradientShift {
+  0%   { background-position: 0%   50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0%   50%; }
+}
+
+@keyframes meshMove {
+  0%   { background-position: 0%  0%,   100% 100%, 50% 50%; }
+  33%  { background-position: 30% 70%,  70%  30%,  80% 20%; }
+  66%  { background-position: 80% 20%,  20%  80%,  10% 90%; }
+  100% { background-position: 0%  0%,   100% 100%, 50% 50%; }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -1000px 0;    }
+  100% { background-position:  1000px 0;    }
+}
+
+@keyframes typewriterBlink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
 }
