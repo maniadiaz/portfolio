@@ -18,6 +18,22 @@ import DnsIcon from '@mui/icons-material/Dns'
 
 export const getWebProjects = (t) => [
   {
+    id: 24,
+    title: t('projects.list.codeLab.title'),
+    subtitle: t('projects.list.codeLab.subtitle'),
+    period: t('projects.list.codeLab.period'),
+    status: 'completed',
+    projectType: 'company',
+    company: 'ServerControl-MZT',
+    githubLink: 'https://github.com/maniadiaz/CodeLab',
+    liveLink: 'https://codelab.servercontrol-mzt.com/',
+    description: t('projects.list.codeLab.description'),
+    responsibilities: t('projects.list.codeLab.responsibilities', { returnObjects: true }),
+    technologies: ['Next.js', 'TypeScript', 'Supabase', 'PostgreSQL', 'RLS', 'RPC', 'Sandpack', 'Git Sandbox', 'App Router', 'Static Export'],
+    icon: BusinessCenterIcon,
+    color: '#0EA5E9'
+  },
+  {
     id: 14,
     title: t('projects.list.apexCRM.title'),
     subtitle: t('projects.list.apexCRM.subtitle'),

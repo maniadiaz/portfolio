@@ -312,6 +312,22 @@
           "Mobile-first responsive design"
         ]
       },
+      "codeLab": {
+        "title": "CodeLab by ServerControl-MZT",
+        "subtitle": "Gamified web platform for learning programming",
+        "period": "March 2026 - April 2026",
+        "description": "Gamified learning platform with module-based paths, Git sandbox and interactive IDE practice, and Supabase backend for progress, leaderboard, and gameplay mechanics.",
+        "responsibilities": [
+          "Frontend development with Next.js (App Router) focused on static export",
+          "Implementation of dynamic module routes and levels/practice views",
+          "Integration of Supabase Auth (email/password) with browser client usage",
+          "Design of gamification logic: XP, levels, regenerating lives, and badges",
+          "Implementation of global, country, and friends leaderboards with profile search",
+          "Progress modeling in Postgres with RLS and RPC functions for sublevel completion",
+          "Integration of practical scenarios with Git sandbox and IDE auto-validation",
+          "Mobile UI optimization (light/dark/system theme and viewport compatibility)"
+        ]
+      },
       "apexCRM": {
         "title": "ApexCRM - CRM SaaS",
         "subtitle": "ApexMesh Network - Multi-Tenant CRM Platform with AI Chatbot",
